@@ -1,0 +1,36 @@
+@import "colors";
+
+.container {
+  padding: 0 2rem;
+}
+
+.main {
+  max-width: 1000px;
+  margin: 0 auto;
+  min-height: 100vh;
+  padding: 4rem 0;
+}
+
+.section {
+  display: flex;
+  align-items: center;
+}
+
+.sectionBox {
+  flex: 1 1 0;
+}
+
+.title {
+  margin: 0;
+  font-size: 134px;
+  line-height: 1;
+  color: $background;
+  -webkit-text-stroke: 3px $primary;
+}
+
+.description {
+  font-size: 36px;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+}

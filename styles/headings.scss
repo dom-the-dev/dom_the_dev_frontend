@@ -1,0 +1,11 @@
+.h1 {
+  color: $background;
+  font-size: 4rem;
+}
+
+@media (max-width: 600px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+}
