@@ -7,10 +7,8 @@ const Hero = ({title, description}) => {
     return (
         <Row>
             <Col>
-                <h1>{title}</h1>
-            </Col>
-            <Col>
-                <p>{description}</p>
+                <h1 className={"w-full"}>{title}</h1>
+                <p className={"w-full"}>{description}</p>
             </Col>
         </Row>
     );

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link'
+import ListElement from "./ListElement";
 
 const ListArticles = ({articles}) => (
     articles.map(article => {
@@ -10,11 +11,11 @@ const ListArticles = ({articles}) => (
 
             return <Link href={`/article/${article.id}`} key={article.slug + article.id}>
                 <a>
-                    <div>
+                    <ListElement>
                         <h4>{article.title}</h4>
                         <h4>{article.category && article.category.name}</h4>
                         <span>{createdAt}</span>
-                    </div>
+                    </ListElement>
                 </a>
             </Link>
         }

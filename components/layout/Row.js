@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const Row = ({children}) => {
     return (
-        <div className={"flex flex-wrap py-8"}>
+        <div className={"flex flex-wrap py-8 px-4"}>
             {children}
         </div>
     );

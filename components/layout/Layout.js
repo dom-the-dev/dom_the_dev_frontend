@@ -25,7 +25,7 @@ const Layout = ({title, children}) => (
 
         <Header/>
 
-        <main className={"container mx-auto"}>
+        <main className={"container"}>
             {children}
         </main>
 
