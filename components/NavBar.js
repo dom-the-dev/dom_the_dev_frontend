@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from '../styles/Navbar.module.scss'
 
 const NavBar = ({navOpen}) => (
-    <ul className={`${styles.navbar} ${navOpen ? styles.navbarShow : null}`}>
+    <ul>
         <li>home</li>
         <li>about</li>
         <li>blog</li>

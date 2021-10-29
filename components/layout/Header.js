@@ -1,12 +1,11 @@
 import React, {useState} from 'react';
-import NavBar from "./NavBar";
-import Burger from "./Burger";
-import styles from "../styles/Header.module.scss"
+import NavBar from "../NavBar";
+import Burger from "../Burger";
 
 const Header = () => {
     const [navOpen, setNavOpen] = useState(false)
     return (
-        <div className={styles.header}>
+        <div>
             <div>
                 dom the dev
             </div>

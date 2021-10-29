@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from '../styles/List.module.scss'
 import Link from 'next/link'
 
 const ListArticles = ({articles}) => (
@@ -11,7 +10,7 @@ const ListArticles = ({articles}) => (
 
             return <Link href={`/article/${article.id}`} key={article.slug + article.id}>
                 <a>
-                    <div className={styles.listItem}>
+                    <div>
                         <h4>{article.title}</h4>
                         <h4>{article.category && article.category.name}</h4>
                         <span>{createdAt}</span>

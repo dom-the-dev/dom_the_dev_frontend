@@ -1,7 +1,7 @@
 import React from 'react';
 import {useRouter} from 'next/router'
 import PropTypes from 'prop-types';
-import Layout from "../../components/Layout";
+import Layout from "../../components/layout/Layout";
 
 const Article = props => {
     const router = useRouter()
