@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from '../styles/list.module.scss'
+import styles from '../styles/List.module.scss'
 
 const ListRepos = ({repos}) => (
     repos.map(repo => (

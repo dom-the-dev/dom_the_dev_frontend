@@ -1,0 +1,28 @@
+@import "colors";
+
+.burger {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+
+  &Close {
+    .burgerPatty1 {
+      background-color: red;
+    }
+
+    .burgerPatty2 {
+      background-color: red;
+    }
+
+    .burgerPatty3 {
+      background-color: red;
+    }
+  }
+}
+
+.burgerPatty {
+  width: 25px;
+  height: 2px;
+  background-color: $white;
+  margin: 4px 0;
+}

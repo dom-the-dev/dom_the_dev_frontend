@@ -7,7 +7,7 @@
 .main {
   max-width: 1000px;
   margin: 0 auto;
-  min-height: 100vh;
+  min-height: 95vh;
   padding: 4rem 0;
 }
 
@@ -16,10 +16,9 @@
   padding: 25px 15px;
 }
 
-
 .title {
   margin: 0;
-  font-size: 134px;
+  font-size: 75px;
   line-height: 1;
   color: $background;
   -webkit-text-stroke: 3px $primary;
