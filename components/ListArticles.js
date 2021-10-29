@@ -1,13 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styles from '../styles/list.module.scss'
+import Link from 'next/link'
 
 const ListArticles = ({articles}) => (
     articles.map(article => (
-        <div key={article.id} style={{border: '1px solid', marginTop: 5}}>
-            <p>{article.title}</p>
-            <p>{article.category.name}</p>
-            <p>{article.description}</p>
-        </div>
+        <Link href={`/article/${article.id}`} key={article.slug + article.id}>
+            <a>
+                <div className={styles.listItem}>
+                    {console.log(article)}
+                    <h4>{article.title}</h4>
+                    <h4>{article.category && article.category.name}</h4>
+                    <span>{article.created_at}</span>
+                </div>
+            </a>
+        </Link>
     ))
 );
 

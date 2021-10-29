@@ -2,8 +2,10 @@ import Head from 'next/head'
 import styles from '../styles/Index.module.scss'
 import axios from "axios";
 import ListArticles from "../components/ListArticles";
+import ListRepos from "../components/ListRepos";
 
-export default function Home({articles}) {
+export default function Home({articles, repos, homepage}) {
+    console.log(homepage)
     return (
         <div>
             <Head>
@@ -13,20 +15,41 @@ export default function Home({articles}) {
             </Head>
 
             <main className={styles.main}>
-                <section className={styles.section}>
-                    <div className={styles.sectionBox}>
-                        <p className={styles.description}>A Fullstack JavaScript Developer never tired of learning and always open for new
-                            projects. <span>#hmu</span></p>
-                    </div>
-                    <div className={styles.sectionBox}>
+                <div className={`row row--align-center`}>
+                    <div className={`col`}>
                         <h1 className={styles.title}>
-                            Dom the dev
+                            {homepage.hero.title}
                         </h1>
+                    </div>
+                    <div className={`col`}>
+                        <p className={styles.description}>
+                            {homepage.hero.description}
+                        </p>
+                    </div>
+                </div>
+
+
+                <section className={styles.section}>
+                    <div className={`row`}>
+                        {articles && articles.length ?
+                            <div className={`col`}>
+                                <>
+                                    <h3>Latest articles</h3>
+                                    <ListArticles articles={articles}/>
+                                </>
+                            </div>
+                            : null}
+                        {repos && repos.length &&
+                        <div className={`col`}>
+                            <>
+                                <h3>Latest GitHub Repos</h3>
+                                <ListRepos repos={repos}/>
+                            </>
+                        </div>
+                        }
                     </div>
                 </section>
 
-                <h3>Latest articles</h3>
-                <ListArticles articles={articles}/>
             </main>
 
             <footer className={styles.footer}>
@@ -37,11 +60,15 @@ export default function Home({articles}) {
 }
 
 export async function getStaticProps() {
-    let latestArticles = await axios.get(process.env.API_URL + 'articles?_limit=3')
+    const homepage = await axios.get(process.env.API_URL + 'homepage')
+    const latestArticles = await axios.get(process.env.API_URL + 'articles?_limit=5')
+    const latestGithub = await axios.get(process.env.GITHUB_API_URL + 'users/dom-the-dev/repos?per_page=5&sort=asc')
 
     return {
         props: {
-            articles: latestArticles.data
+            homepage: homepage.data,
+            articles: latestArticles.data,
+            repos: latestGithub.data,
         },
     }
 }

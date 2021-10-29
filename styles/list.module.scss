@@ -1,0 +1,26 @@
+@import "colors";
+
+.listItem {
+  border-top: 1px solid $primary;
+  padding: 15px;
+  display: block;
+
+
+  a {
+    color: $white;
+  }
+
+  &:hover {
+    background-color: $primary;
+    color: $background;
+
+    a {
+      color: $background;
+    }
+  }
+
+  h4 {
+    margin: 0;
+    padding: 0;
+  }
+}

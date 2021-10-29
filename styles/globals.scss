@@ -1,5 +1,6 @@
 @import "colors";
 @import "headings";
+@import "grid";
 html,
 body {
   background: $background;
@@ -17,4 +18,14 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+    list-style: none;
+
+  li {
+    list-style: none;
+  }
 }

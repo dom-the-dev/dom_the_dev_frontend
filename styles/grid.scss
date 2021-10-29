@@ -1,0 +1,13 @@
+.row {
+  display: flex;
+  flex-wrap: wrap;
+
+  &--align-center {
+    align-items: center;
+  }
+}
+
+.col {
+  width: 50%;
+  padding: 0 15px;
+}
