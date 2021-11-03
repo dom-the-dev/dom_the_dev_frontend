@@ -5,7 +5,7 @@ import NavBarListItem from "./NavBarListItem";
 const NavBarList = ({setNavOpen, navOpen}) => {
 	return (
 		<ul className={"md:flex"}>
-			<NavBarListItem anchor={"/"} title={"start"} navOpen={navOpen} setNavOpen={setNavOpen}/>
+			<NavBarListItem anchor={"#start"} title={"start"} navOpen={navOpen} setNavOpen={setNavOpen}/>
 			<NavBarListItem anchor={"#about"} title={"about"} navOpen={navOpen} setNavOpen={setNavOpen}/>
 			<NavBarListItem anchor={"#skills"} title={"skills"} navOpen={navOpen} setNavOpen={setNavOpen}/>
 			<NavBarListItem anchor={"#github"} title={"github"} navOpen={navOpen} setNavOpen={setNavOpen}/>
