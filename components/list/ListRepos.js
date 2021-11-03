@@ -1,16 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ListElement from "./ListElement";
+import Repo from "./Repo";
 
 const ListRepos = ({repos}) => (
-    repos.map(repo => (
-        <a href={repo.html_url} key={repo.name + repo.id} target="_blank" rel="noopener noreferrer">
-            <ListElement>
-                <h4>{repo.name}</h4>
-                <span>{repo.description}</span>
-            </ListElement>
-        </a>
-    ))
+    <div className={"grid  gap-4 grid-col-1 md:grid-cols-2 lg:grid-cols-5"}>
+        {repos.map(repo => (
+            <Repo key={repo.name + repo.id} repo={repo}/>
+        ))}
+    </div>
 )
 
 ListRepos.propTypes = {
