@@ -4,20 +4,20 @@ import Footer from "./Footer";
 import Header from "./Header";
 
 const Layout = ({title, children}) => (
-    <div>
+    <div className={"bg-dark text-white min-h-screen"}>
         <Head>
             <title>{title} | Dom the dev</title>
             <meta name="description" content="Blog/Portfolio of Dom the Dev"/>
             <link rel="icon" href="/favicon.ico"/>
             <link
                 rel="preload"
-                href="/fonts/Roboto-Regular.ttf"
+                href="/fonts/Montserrat-Regular.ttf"
                 as="font"
                 crossOrigin=""
             />
             <link
                 rel="preload"
-                href="/fonts/Roboto-Bold.ttf"
+                href="/fonts/Montserrat-Bold.ttf"
                 as="font"
                 crossOrigin=""
             />
