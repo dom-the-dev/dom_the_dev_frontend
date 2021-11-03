@@ -14,8 +14,8 @@ const NavBar = ({navOpen, setNavOpen}) => (
 
 		<button onClick={() => setNavOpen(!navOpen)} type="button" className={"md:hidden"}>
 			<span className="sr-only">Close Menu</span>
-			<div className={"w-7 rounded h-0.5 bg-white my-1.5 transform origin-top-left rotate-45"}/>
-			<div className={"w-7 rounded h-0.5 bg-white mt-5 transform origin-top-left -rotate-45"}/>
+			<div className={"w-8 rounded h-0.5 bg-white my-1.5 transform origin-top-left rotate-45"}/>
+			<div className={"w-8 rounded h-0.5 bg-white mt-5 transform origin-top-left -rotate-45"}/>
 		</button>
 
 		<NavBarList navOpen={navOpen} setNavOpen={setNavOpen}/>
