@@ -6,7 +6,7 @@ import Container from "./Container";
 const Header = () => {
 	const [navOpen, setNavOpen] = useState(false)
 	return (
-		<header className={"bg-dark py-5 fixed w-full"}>
+		<header className={"bg-dark py-5 fixed w-full z-50"}>
 			<Container>
 				<div className={"flex justify-between items-center"}>
 					<div className={"font-bold"}>

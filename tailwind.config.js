@@ -18,11 +18,16 @@ module.exports = {
 			black: colors.black,
 			white: colors.white,
 			primary: '#63CCFF',
+			bnother: '#00FFD1',
+			antoher: '#00D1FF',
 			dark: '#13202B'
 		},
 		extend: {
 			animation: {
 				'spin-slow': 'spin 10s linear infinite',
+			},
+			zIndex: {
+				'-10': '-10',
 			}
 		},
 	},
