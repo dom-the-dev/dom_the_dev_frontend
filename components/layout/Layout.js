@@ -3,6 +3,7 @@ import Head from "next/head";
 import Footer from "./Footer";
 import Header from "./Header";
 import Container from "./Container";
+import SocialMediaBadge from "../SocialMediaBadge";
 
 const Layout = ({title, children}) => (
 	<div className={"bg-dark text-white min-h-screen"}>
@@ -27,6 +28,7 @@ const Layout = ({title, children}) => (
 		<Header/>
 
 		<main>
+			<SocialMediaBadge/>
 			<Container>
 				{children}
 			</Container>
