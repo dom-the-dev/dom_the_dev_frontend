@@ -9,7 +9,7 @@ export default function Home({repos}) {
 	return (
 		<Layout>
 			<Section id={"start"}>
-				<span className={"text-3xl"}>Welcome, I am</span>
+				<span className={"text-3xl"}>Welcome, I&apos;m</span>
 				<h1><span className={"font-bold"}>dom</span> <span className={"text-primary font-light"}>the dev</span></h1>
 				<p className={"text-3xl"}>A <span className="font-bold">Fullstack JavaScript Developer</span> never
 					tired of learning and always up for new projects. <a
@@ -18,11 +18,11 @@ export default function Home({repos}) {
 
 			<Section id={"about"} title={"about."}>
 					<p>
-						Hi, I’m <span className="font-bold">Dom</span> and Im a full stack developer from <span
+						Hi, I&apos;m <span className="font-bold">Dom</span> and Im a full stack developer from <span
 						className="font-bold">Germany.</span>
 					</p>
 					<p>
-						After a <span className="font-bold">vocational training</span> in Germany's capital city Berlin,
+						After a <span className="font-bold">vocational training</span> in Germany&apos;s capital city Berlin,
 						I started my career as a <span className="font-bold">frontend
 						developer</span>.
 					</p>
