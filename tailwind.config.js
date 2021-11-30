@@ -17,8 +17,8 @@ module.exports = {
 			current: 'currentColor',
 			black: colors.black,
 			white: colors.white,
-			primary: '#63CCFF',
-			bnother: '#00FFD1',
+			secondary: '#63CCFF',
+			primary: '#00FFD1',
 			antoher: '#00D1FF',
 			dark: '#13202B'
 		},

@@ -12,11 +12,11 @@ const NavBarList = ({setNavOpen, navOpen}) => {
 					<div className={`w-8 rounded h-0.5 bg-white mt-5 transform origin-top-left -rotate-45`}/>
 				</button>
 			</li>
-			<NavBarListItem anchor={`#start`} title={`start`} navOpen={navOpen} setNavOpen={setNavOpen}/>
-			<NavBarListItem anchor={`#about`} title={`about`} navOpen={navOpen} setNavOpen={setNavOpen}/>
-			<NavBarListItem anchor={`#skills`} title={`skills`} navOpen={navOpen} setNavOpen={setNavOpen}/>
-			<NavBarListItem anchor={`#github`} title={`github`} navOpen={navOpen} setNavOpen={setNavOpen}/>
-			<NavBarListItem anchor={`#services`} title={`services`} navOpen={navOpen} setNavOpen={setNavOpen}/>
+			{/*<NavBarListItem anchor={`#start`} title={`start`} navOpen={navOpen} setNavOpen={setNavOpen}/>*/}
+			{/*<NavBarListItem anchor={`#about`} title={`about`} navOpen={navOpen} setNavOpen={setNavOpen}/>*/}
+			{/*<NavBarListItem anchor={`#skills`} title={`skills`} navOpen={navOpen} setNavOpen={setNavOpen}/>*/}
+			{/*<NavBarListItem anchor={`#github`} title={`github`} navOpen={navOpen} setNavOpen={setNavOpen}/>*/}
+			{/*<NavBarListItem link={`react-vs-vanilla`} title={`react vs vanilla`} navOpen={navOpen} setNavOpen={setNavOpen}/>*/}
 			<NavBarListItem cta={true} anchor={`#contact`} title={`hire me`} navOpen={navOpen} setNavOpen={setNavOpen}/>
 		</ul>
 	);

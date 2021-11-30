@@ -4,7 +4,7 @@ import ListElement from "./ListElement";
 import Repo from "./Repo";
 
 const ListRepos = ({repos}) => (
-    <div className={"grid  gap-4 grid-col-1 md:grid-cols-2 lg:grid-cols-5"}>
+    <div className={"grid gap-4 grid-col-1"}>
         {repos.map(repo => (
             <Repo key={repo.name + repo.id} repo={repo}/>
         ))}

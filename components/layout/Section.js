@@ -3,12 +3,10 @@ import PropTypes from 'prop-types';
 
 const Section = ({children, id, title, verticalCenter, moreLink, moreTitle}) => {
 	return (
-		<div id={id} className={`flex ${verticalCenter ? "h-screen items-center" : "pt-20"}`}>
-			<div>
+		<div id={id} className={`flex ${verticalCenter ? "h-screen items-center" : "pt-20 pb-20"}`}>
+			<div className={"w-full"}>
 				<div className={`relative inline-block mb-8`}>
-					<div className={`bg-primary w-full h-full absolute transform -rotate-6`}/>
-					<h2 className={"relative font-bold inline-block"}
-						style={{textShadow: "2px 3px 1px #000000"}}>
+					<h2 className={"relative font-bold inline-block"}>
 						{title}
 					</h2>
 				</div>
