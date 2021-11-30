@@ -43,10 +43,10 @@ export default function Home({repos}) {
 						<span className="font-bold"> new projects</span>.
 					</p>
 
-					<p>
-						On this website you can see the stuff i am working on beside my work. Be sure to check out my latest project <a
-						href="https://react-vs-vanilla.vercel.app/" target={"_blank"} className={"text-primary font-bold"} rel={"noreferrer"}>React vs. Vanilla JS</a>
-					</p>
+					{/*<p>*/}
+					{/*	On this website you can see the stuff i am working on beside my work. Be sure to check out my latest project <a*/}
+					{/*	href="https://react-vs-vanilla.vercel.app/" target={"_blank"} className={"text-primary font-bold"} rel={"noreferrer"}>React vs. Vanilla JS</a>*/}
+					{/*</p>*/}
 
 					<p>
 						If you are interested in working with me, feel free to use the <a
@@ -55,10 +55,6 @@ export default function Home({repos}) {
 						className="font-bold text-primary"><a href="mailto:hi@domthedev.com">hi@domthedev.com</a></span>.
 					</p>
 			</Section>
-
-			{/*<Section id={"skills"} title={"skills."}>*/}
-			{/*todo*/}
-			{/*</Section>*/}
 
 			{/*<Section id={"react-vs-vanilla"} title={"react-vs-vanilla."}>*/}
 			{/*	In this little series I am building applications with the same design. One in react and one in pure*/}
