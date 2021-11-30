@@ -7,7 +7,7 @@ import ContactForm from "../components/ContactForm";
 
 export default function Home({repos}) {
 	return (
-		<Layout>
+		<Layout title={"Home"}>
 			<Section id={"start"}>
 				<span className={"text-3xl"}>Welcome, I&apos;m</span>
 				<h1><span className={"font-bold"}>dom</span> <span className={"text-primary font-light"}>the dev</span></h1>
@@ -24,17 +24,16 @@ export default function Home({repos}) {
 					<p>
 						After a <span className="font-bold">vocational training</span> in Germany&apos;s capital city Berlin,
 						I started my career as a <span className="font-bold">frontend
-						developer</span>.
+						developer</span> at the agency <span className="font-bold">SIRUP</span>.
 					</p>
 
 					<p>
-						Besides a lot of online courses, i passed the <span className="font-bold">Full Stack JavaScript Developer Nanodegree</span> at <span
-						className="font-bold">Udacity</span>.
+						Five beautiful years as a frontend developer i decided to take the next step and started focusing on learning full stack development.
 					</p>
 
 					<p>
-						After five beautiful years as a frontend developer at the agency <span
-						className="font-bold">SIRUP</span> i decided to take the next step.
+						Soon I passed the <span className="font-bold">Full Stack JavaScript Developer Nanodegree</span> at <span
+						className="font-bold">Udacity</span> and started to call myself a Full Stack Developer.
 					</p>
 
 					<p>
@@ -42,6 +41,11 @@ export default function Home({repos}) {
 						className="font-bold">full stack javascript developer</span>, <span
 						className="font-bold">never tired</span> of learning and always up for
 						<span className="font-bold"> new projects</span>.
+					</p>
+
+					<p>
+						On this website you can see the stuff i am working on beside my work. Be sure to check out my latest project <a
+						href="https://react-vs-vanilla.vercel.app/" target={"_blank"} className={"text-primary font-bold"} rel={"noreferrer"}>React vs. Vanilla JS</a>
 					</p>
 
 					<p>
