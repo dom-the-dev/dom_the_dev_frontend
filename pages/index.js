@@ -9,7 +9,8 @@ export default function Home({repos}) {
 	return (
 		<Layout>
 			<Section id={"start"}>
-				<h1><span className={`relative z-0`} style={{textShadow: "2px 3px 1px #000000"}}>dom</span> the dev</h1>
+				<span className={"text-3xl"}>Welcome, I am</span>
+				<h1><span className={"font-bold"}>dom</span> <span className={"text-primary font-light"}>the dev</span></h1>
 				<p className={"text-3xl"}>A <span className="font-bold">Fullstack JavaScript Developer</span> never
 					tired of learning and always up for new projects. <a
 						href="#contact"><span className={"text-primary font-bold"}>#hmu</span></a></p>

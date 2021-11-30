@@ -5,7 +5,11 @@ const Footer = () => {
 	return (
 		<footer className={"py-5"}>
 			<Container>
-				By Dom the dev
+					<div className={"flex justify-center items-center"}>
+						<div className={"font-bold"}>
+							dom <span className={"font-thin text-primary"}>the dev</span>
+						</div>
+					</div>
 			</Container>
 		</footer>
 	);

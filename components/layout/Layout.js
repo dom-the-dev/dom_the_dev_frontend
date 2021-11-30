@@ -17,6 +17,7 @@ const Layout = ({title, children}) => (
 				as="font"
 				crossOrigin=""
 			/>
+			<link rel="shortcut icon" href="/favicon.ico" />
 			<link
 				rel="preload"
 				href="/fonts/Montserrat-Bold.ttf"
