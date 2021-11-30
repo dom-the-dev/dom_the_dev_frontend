@@ -10,7 +10,6 @@ const Repo = ({repo}) => {
 				<h4>{repo.name}</h4>
 				<p>{repo.description}</p>
 			</div>
-			{console.log(repo)}
 			<div className={`flex`}>
 				<a href={repo.html_url} target="_blank" rel="noopener noreferrer" className={`border-t ${buttonStyle}`}>
 					<h4>code</h4>

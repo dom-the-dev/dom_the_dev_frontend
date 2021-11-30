@@ -1,13 +1,20 @@
 import React from 'react';
 import Container from "./Container";
+import Link from 'next/link'
 
 const Footer = () => {
 	return (
 		<footer className={"py-5"}>
 			<Container>
-					<div className={"flex justify-center items-center"}>
+					<div className={"text-center"}>
 						<div className={"font-bold"}>
 							dom <span className={"font-thin text-primary"}>the dev</span>
+						</div>
+
+						<div className={"text-xs"}>
+							<Link href="/impressum">
+								<a>Impressum</a>
+							</Link>
 						</div>
 					</div>
 			</Container>

@@ -16,7 +16,9 @@ const NavBarList = ({setNavOpen, navOpen}) => {
 			{/*<NavBarListItem anchor={`#about`} title={`about`} navOpen={navOpen} setNavOpen={setNavOpen}/>*/}
 			{/*<NavBarListItem anchor={`#skills`} title={`skills`} navOpen={navOpen} setNavOpen={setNavOpen}/>*/}
 			{/*<NavBarListItem anchor={`#github`} title={`github`} navOpen={navOpen} setNavOpen={setNavOpen}/>*/}
-			<NavBarListItem link={`https://react-vs-vanilla.js`} title={`react vs vanilla`} navOpen={navOpen} setNavOpen={setNavOpen}/>
+
+			{/*<NavBarListItem link={`https://react-vs-vanilla.js`} title={`react vs vanilla`} navOpen={navOpen} setNavOpen={setNavOpen}/>*/}
+
 			<NavBarListItem cta={true} anchor={`#contact`} title={`hire me`} navOpen={navOpen} setNavOpen={setNavOpen}/>
 		</ul>
 	);
