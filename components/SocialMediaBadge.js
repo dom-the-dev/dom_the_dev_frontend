@@ -8,7 +8,7 @@ const SocialMediaBadge = () => {
 	const [show, setShow] = useState(false)
 
 	return (
-		<div className={"fixed right-14  bottom-20 transform -translate-y-1/2 "}>
+		<div className={"fixed right-14  bottom-20 transform -translate-y-1/2 z-50"}>
 			<a href={"https://twitter.com/Dom_TheDev"}
 			   rel="noreferrer noopener"
 			   target="_blank"
