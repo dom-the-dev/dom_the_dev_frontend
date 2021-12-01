@@ -17,7 +17,7 @@ const NavBarList = ({setNavOpen, navOpen}) => {
 			{/*<NavBarListItem anchor={`#skills`} title={`skills`} navOpen={navOpen} setNavOpen={setNavOpen}/>*/}
 			{/*<NavBarListItem anchor={`#github`} title={`github`} navOpen={navOpen} setNavOpen={setNavOpen}/>*/}
 
-			<NavBarListItem newTab={true} link={`https://react-vs-vanilla.vercel.app/`} title={`react vs vanilla`} navOpen={navOpen} setNavOpen={setNavOpen}/>
+			{/*<NavBarListItem newTab={true} link={`https://react-vs-vanilla.vercel.app/`} title={`react vs vanilla`} navOpen={navOpen} setNavOpen={setNavOpen}/>*/}
 
 			<NavBarListItem cta={true} anchor={`#contact`} title={`hire me`} navOpen={navOpen} setNavOpen={setNavOpen}/>
 		</ul>
