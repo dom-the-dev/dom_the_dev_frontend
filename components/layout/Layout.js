@@ -10,6 +10,11 @@ const Layout = ({title, children}) => (
 		<Head>
 			<title>{title} | Dom the dev</title>
 			<meta name="description" content="Blog/Portfolio of Dom the Dev"/>
+			<meta name="twitter:card" content="summary_large_image" />
+			<meta name="twitter:site" content="@Dom_TheDev" />
+			<meta name="twitter:title" content="Dom the Dev - Full Stack Developer" />
+			<meta name="twitter:description" content="Website of Dom the Dev - Full Stack Developer" />
+			<meta name="twitter:image" content="/card.png" />
 			<link rel="icon" href="/favicon.ico"/>
 			<link
 				rel="preload"

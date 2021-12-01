@@ -34,7 +34,7 @@ export default function Home({repos}) {
 				</p>
 
 				<p>
-					Five beautiful years as a frontend developer i decided to take the next step and started focusing on
+					<span className="font-bold">Five years</span> as a frontend developer later i decided to take the next step and started focusing on
 					learning full stack development.
 				</p>
 
