@@ -15,6 +15,14 @@ const Layout = ({title, children}) => (
 			<meta name="twitter:title" content="Dom the Dev - Full Stack Developer" />
 			<meta name="twitter:description" content="Website of Dom the Dev - Full Stack Developer" />
 			<meta name="twitter:image" content={`https://www.domthedev.com/${title}.png`} />
+
+			<meta property="og:url" content="http://www.domthedev.com/" />
+			<meta property="og:title" content="Dom the Dev - Full Stack Developer" />
+			<meta property="og:description" content="Website of Dom the Dev - Full Stack Developer" />
+			<meta property="og:image" content={`https://www.domthedev.com/${title}.png`} />
+
+
+
 			<link rel="icon" href="/favicon.ico"/>
 			<link
 				rel="preload"
