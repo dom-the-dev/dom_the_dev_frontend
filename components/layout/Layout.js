@@ -14,7 +14,7 @@ const Layout = ({title, children}) => (
 			<meta name="twitter:site" content="@Dom_TheDev" />
 			<meta name="twitter:title" content="Dom the Dev - Full Stack Developer" />
 			<meta name="twitter:description" content="Website of Dom the Dev - Full Stack Developer" />
-			<meta name="twitter:image" content="/card.png" />
+			<meta name="twitter:image" content="https://www.domthedev.com/card.png" />
 			<link rel="icon" href="/favicon.ico"/>
 			<link
 				rel="preload"
