@@ -19,7 +19,7 @@ const NavBarList = ({setNavOpen, navOpen}) => {
 
 			{/*<NavBarListItem newTab={true} link={`https://react-vs-vanilla.vercel.app/`} title={`react vs vanilla`} navOpen={navOpen} setNavOpen={setNavOpen}/>*/}
 
-			<NavBarListItem cta={true} anchor={`#contact`} title={`hire me`} navOpen={navOpen} setNavOpen={setNavOpen}/>
+			<NavBarListItem cta={true} anchor={`#contact`} title={`contact`} navOpen={navOpen} setNavOpen={setNavOpen}/>
 		</ul>
 	);
 };
