@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
 
-const NavBarListItem = ({anchor, title, setNavOpen, navOpen, cta, link, newTab}) => {
+const NavBarListItem = ({anchor, title, setNavOpen, navOpen, cta, link}) => {
 
 	const ListItem = ({children}) => (
 		<li className={`px-2 mt-10 md:mt-0 text-right text-4xl md:text-base `}>
@@ -43,13 +43,11 @@ NavBarListItem.propTypes = {
 	title: PropTypes.string.isRequired,
 	setNavOpen: PropTypes.func.isRequired,
 	navOpen: PropTypes.bool.isRequired,
-	cta: PropTypes.bool.isRequired,
-	newTab: PropTypes.bool.isRequired,
+	cta: PropTypes.bool.isRequired
 };
 
 NavBarListItem.defaultProps = {
-	cta: false,
-	newTab: false
+	cta: false
 }
 
 export default NavBarListItem;
