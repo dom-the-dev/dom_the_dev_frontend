@@ -18,7 +18,7 @@ export default function Home({repos}) {
 
 			<Section id={"about"} title={"about."}>
 					<p>
-						Hi, I&apos;m <span className="font-bold">Dom</span> and Im a full stack developer from <span
+						Hi, I&apos;m <span className="font-bold">Dom</span> and I&apos;m a full stack developer from <span
 						className="font-bold">Germany.</span>
 					</p>
 					<p>
