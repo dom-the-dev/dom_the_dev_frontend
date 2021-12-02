@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
 
-const NavBarListItem = ({anchor, title, setNavOpen, navOpen, cta, link}) => {
+const NavBarListItem = ({anchor, title, setNavOpen, navOpen, cta, link, newTab}) => {
 
 	const ListItem = ({children}) => (
 		<li className={`px-2 mt-10 md:mt-0 text-right text-4xl md:text-base `}>
@@ -14,6 +14,8 @@ const NavBarListItem = ({anchor, title, setNavOpen, navOpen, cta, link}) => {
 		return (
 			<ListItem>
 			<a href={anchor}
+			   target={newTab ? "_blank" : "_self"}
+			   rel={"noreferrer"}
 			   className={`px-2 py-1  hover:text-primary ${cta ? "bg-primary text-dark hover:text-dark" : ""}`}
 			   onClick={() => setNavOpen(!navOpen)}>
 				{title}
@@ -43,7 +45,8 @@ NavBarListItem.propTypes = {
 	title: PropTypes.string.isRequired,
 	setNavOpen: PropTypes.func.isRequired,
 	navOpen: PropTypes.bool.isRequired,
-	cta: PropTypes.bool.isRequired
+	cta: PropTypes.bool.isRequired,
+	newTab: PropTypes.bool
 };
 
 NavBarListItem.defaultProps = {
