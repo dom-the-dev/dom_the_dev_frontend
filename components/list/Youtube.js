@@ -15,7 +15,8 @@ const Youtube = ({vid}) => {
             </div>
         </div>
 
-            <a href={`https://www.youtube.com/watch?v=${vid.id.videoId}`} target="_blank" rel="noopener noreferrer" className={`${buttonStyle}`}>
+            <a href={`https://www.youtube.com/watch?v=${vid.id.videoId}`} target="_blank" rel="noopener noreferrer"
+               className={`${buttonStyle}`}>
                 <h4>Watch</h4>
             </a>
         </div>
