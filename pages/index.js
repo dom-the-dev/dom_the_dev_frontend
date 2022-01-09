@@ -3,24 +3,9 @@ import Layout from "../components/layout/Layout";
 import Section from "../components/layout/Section";
 import ListRepos from "../components/list/ListRepos";
 import ContactForm from "../components/ContactForm";
-import React, {useEffect, useState} from "react";
 import Project from "../components/Project";
 
-export default function Home() {
-    const [repos, setRepos] = useState([]);
-    const [youtube, setYoutube] = useState([]);
-
-    useEffect(() => {
-        fetchData()
-    }, []);
-
-    async function fetchData() {
-        const latestGithub = await axios.get(process.env.NEXT_PUBLIC_GITHUB_API_URL + 'users/dom-the-dev/repos?per_page=6&sort=asc')
-        const {data} = await axios.get(`${process.env.NEXT_PUBLIC_YT_API_URL}?key=${process.env.NEXT_PUBLIC_YT_API_KEY}&channelId=${process.env.NEXT_PUBLIC_YT_CHANNEL_ID}&part=snippet,id&order=date&maxResults=4`)
-        setRepos(latestGithub.data)
-        setYoutube(data.items.filter(item => item.id.kind === 'youtube#video'))
-    }
-
+export default function Home({repos, youtube}) {
     return (
         <Layout title={"Home"}>
             <Section id={"start"}>
@@ -31,7 +16,6 @@ export default function Home() {
                     tired of learning and always up for new projects. <a
                         href="#contact"><span className={"text-primary font-bold"}>#hmu</span></a></p>
             </Section>
-
 
             <Section id={"projects"} title={"Projects."}>
                 <div className={`grid gap-2 grid-col-1 md:grid-cols-2`}>
@@ -49,24 +33,6 @@ export default function Home() {
                 </div>
             </Section>
 
-            <Section id={"youtube"} title={"YouTube Videos."}
-                     moreLink={"https://www.youtube.com/channel/UCAa2t4QIxlaUuPO2FKq5TDw"}
-                     moreTitle={"see more"}>
-                <ListRepos videos={youtube}/>
-            </Section>
-
-            <Section id={"github"} title={"GitHub Repos."} moreLink={"https://github.com/dom-the-dev/"}
-                     moreTitle={"see more"}>
-                <ListRepos repos={repos}/>
-            </Section>
-
-            <Section id={"contact"} title={"contact."}>
-                <ContactForm/>
-            </Section>
-
-
-
-
             {/*<Section id={"about"} title={"about."}>*/}
             {/*    <p>*/}
             {/*        Hi, I&apos;m <span className="font-bold">Dom</span> and I&apos;m a full stack developer from <span*/}
@@ -77,7 +43,7 @@ export default function Home() {
             {/*        After a <span className="font-bold">vocational training</span> in Germany&apos;s capital city*/}
             {/*        Berlin,*/}
             {/*        I started my career as a <span className="font-bold">frontend*/}
-            {/*			developer</span> at the agency <span className="font-bold">SIRUP</span>.*/}
+			{/*			developer</span> at the agency <span className="font-bold">SIRUP</span>.*/}
             {/*    </p>*/}
 
             {/*    <p>*/}
@@ -107,6 +73,32 @@ export default function Home() {
             {/*    </p>*/}
             {/*</Section>*/}
 
+            <Section id={"youtube"} title={"latest youtube videos."}
+                     moreLink={"https://www.youtube.com/channel/UCAa2t4QIxlaUuPO2FKq5TDw"}
+                     moreTitle={"visit channel"}>
+                <ListRepos videos={youtube}/>
+            </Section>
+
+            <Section id={"github"} title={"latest repos."} moreLink={"https://github.com/dom-the-dev/"}
+                     moreTitle={"see more"}>
+                <ListRepos repos={repos}/>
+            </Section>
+
+            <Section id={"contact"} title={"contact."}>
+                <ContactForm/>
+            </Section>
         </Layout>
     )
+}
+
+export async function getStaticProps() {
+    const latestGithub = await axios.get(process.env.NEXT_PUBLIC_GITHUB_API_URL + 'users/dom-the-dev/repos?per_page=6&sort=asc')
+    const {data} = await axios.get(`${process.env.NEXT_PUBLIC_YT_API_URL}?key=${process.env.NEXT_PUBLIC_YT_API_KEY}&channelId=${process.env.NEXT_PUBLIC_YT_CHANNEL_ID}&part=snippet,id&order=date&maxResults=4`)
+
+    return {
+        props: {
+            repos: latestGithub.data,
+            youtube: data.items.filter(item => item.id.kind === 'youtube#video')
+        },
+    }
 }
