@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Image from 'next/image';
+// import Image from 'next/image';
 
 const Youtube = ({vid}) => {
     const {snippet} = vid
@@ -12,12 +12,9 @@ const Youtube = ({vid}) => {
 
                 {snippet.thumbnails ?
                     <div className={"w-full"}>
-                        <Image
+                        <img
                             alt={`${snippet.title} Thumbnail`}
                             src={snippet.thumbnails.high.url}
-                            layout="responsive"
-                            width={700}
-                            height={475}
                         />
                     </div>
                     : null}
