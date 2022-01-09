@@ -14,10 +14,9 @@ const Project = ({title, description, url, image}) => {
                 <h5 className={`uppercase font-bold`}>{title}</h5>
                 <div className={`h-1 bg-primary rounded mt-2 mb-5`}/>
                 {description}
-                <div className={`mt-3`}>
+                <div className={`mt-3 text-right`}>
                     <Link href={url}>
-                        <a target="_blank" rel={"noopener noreferrer"}
-                           className={`bg-primary py-1 px-2 rounded font-bold text-sm text-dark`}>
+                        <a className={`text-dark bg-primary p-2`} target="_blank" rel={"noopener noreferrer"}>
                             Visit
                         </a>
                     </Link>

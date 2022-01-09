@@ -7,9 +7,7 @@ const Youtube = ({vid}) => {
     const buttonStyle = `border border-t-0 flex-grow text-center py-2 font-bold uppercase hover:bg-primary transition-background duration-500 ease-in-out`
 
     return (
-        <div className={"flex flex-col"}>
-            <div className={"flex flex-col md:flex-row border border-white break-words "}>
-
+        <div className={"border"}>
                 {snippet.thumbnails ?
                     <div className={"w-full"}>
                         <img
@@ -20,14 +18,14 @@ const Youtube = ({vid}) => {
                     : null}
                 <div className={"p-4"}>
                     <h4>{snippet.title}</h4>
+                    <div className={`h-1 bg-primary rounded mt-2 mb-5`}/>
                     <p>{snippet.description}</p>
+                    <div className={`mt-5 text-right`}>
+                        <a className={`text-dark bg-primary p-2`} href={`https://www.youtube.com/watch?v=${vid.id.videoId}`} target="_blank" rel="noopener noreferrer">
+                            Watch
+                        </a>
+                    </div>
                 </div>
-            </div>
-
-            <a href={`https://www.youtube.com/watch?v=${vid.id.videoId}`} target="_blank" rel="noopener noreferrer"
-               className={`${buttonStyle}`}>
-                <h4>Watch</h4>
-            </a>
         </div>
     );
 };

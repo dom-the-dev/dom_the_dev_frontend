@@ -16,7 +16,7 @@ export default function Home() {
 
     async function fetchData() {
         const latestGithub = await axios.get(process.env.NEXT_PUBLIC_GITHUB_API_URL + 'users/dom-the-dev/repos?per_page=6&sort=asc')
-        const {data} = await axios.get(`${process.env.NEXT_PUBLIC_YT_API_URL}?key=${process.env.NEXT_PUBLIC_YT_API_KEY}&channelId=${process.env.NEXT_PUBLIC_YT_CHANNEL_ID}&part=snippet,id&order=date&maxResults=3`)
+        const {data} = await axios.get(`${process.env.NEXT_PUBLIC_YT_API_URL}?key=${process.env.NEXT_PUBLIC_YT_API_KEY}&channelId=${process.env.NEXT_PUBLIC_YT_CHANNEL_ID}&part=snippet,id&order=date&maxResults=4`)
         setRepos(latestGithub.data)
         setYoutube(data.items.filter(item => item.id.kind === 'youtube#video'))
     }
@@ -36,26 +36,26 @@ export default function Home() {
             <Section id={"projects"} title={"Projects."}>
                 <div className={`grid gap-2 grid-col-1 md:grid-cols-2`}>
                     <Project title={"movie-slap"}
-                             description={"Browse Video and create your Movie Watchlist. Use the 'Movie-Slap' to Tinder through random videos."}
+                             description={"Browse Movies and create your Movie Watchlist. Use the 'Movie-Slap' to Tinder through random videos."}
                              url={"https://movie-slap.vercel.app/"}
                              image={"./movie-slap.png"}
                     />
 
                     <Project title={"Spoti Fight"}
-                             description={"Browse Video and create your Movie Watchlist. Use the 'Movie-Slap' to Tinder through random videos."}
+                             description={"Spotify Game "}
                              url={"https://spoti-fight.vercel.app/"}
                              image={"./spoti-fight.png"}
                     />
                 </div>
             </Section>
 
-            <Section id={"youtube"} title={"latest youtube videos."}
+            <Section id={"youtube"} title={"YouTube Videos."}
                      moreLink={"https://www.youtube.com/channel/UCAa2t4QIxlaUuPO2FKq5TDw"}
                      moreTitle={"see more"}>
                 <ListRepos videos={youtube}/>
             </Section>
 
-            <Section id={"github"} title={"latest repos."} moreLink={"https://github.com/dom-the-dev/"}
+            <Section id={"github"} title={"GitHub Repos."} moreLink={"https://github.com/dom-the-dev/"}
                      moreTitle={"see more"}>
                 <ListRepos repos={repos}/>
             </Section>
