@@ -79,7 +79,7 @@ export default function Home({repos, youtube}) {
                 <ListRepos videos={youtube}/>
             </Section>
 
-            <Section id={"github"} title={"latest GitHub repos."} moreLink={"https://github.com/dom-the-dev/"}
+            <Section id={"github"} title={"latest GitHub repos."} secondary={true} moreLink={"https://github.com/dom-the-dev/"}
                      moreTitle={"see more"}>
                 <ListRepos repos={repos}/>
             </Section>
@@ -92,7 +92,7 @@ export default function Home({repos, youtube}) {
 }
 
 export async function getServerSideProps() {
-    const latestGithub = await axios.get(process.env.NEXT_PUBLIC_GITHUB_API_URL + 'users/dom-the-dev/repos?per_page=6&sort=asc')
+    const latestGithub = await axios.get(process.env.NEXT_PUBLIC_GITHUB_API_URL + 'users/dom-the-dev/repos?per_page=4&sort=asc')
     const {data} = await axios.get(`${process.env.NEXT_PUBLIC_YT_API_URL}?key=${process.env.NEXT_PUBLIC_YT_API_KEY}&channelId=${process.env.NEXT_PUBLIC_YT_CHANNEL_ID}&part=snippet,id&order=date&maxResults=4`)
 
     return {

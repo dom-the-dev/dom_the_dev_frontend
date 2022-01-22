@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {FaGithub} from "@react-icons/all-files/fa/FaGithub";
-import {FaInternetExplorer} from "@react-icons/all-files/fa/FaInternetExplorer";
+import {MdOpenInNew} from "@react-icons/all-files/md/MdOpenInNew";
 
 const Repo = ({repo}) => {
-
 	return (
 		<div className={"flex border-t border-dark break-words flex-col pb-10 pt-10"}>
 			<div className={`flex flex-col flex-grow`}>
@@ -21,15 +20,15 @@ const Repo = ({repo}) => {
 						<a href={`https://dom-the-dev.github.io/${repo.name}`} target="_blank" rel="noopener noreferrer"
 						   className={`text-xsml-2 text-dark bg-primary p-2 rounded-full`}>
 							<span className="sr-only">Open website</span>
-							<FaInternetExplorer title={"GitHub Page"}/>
+							<MdOpenInNew title={"GitHub Page"}/>
 						</a>
 					}
 
 					{repo.homepage &&
-						<a href={`https://dom-the-dev.github.io/${repo.name}`} target="_blank" rel="noopener noreferrer"
+						<a href={repo.homepage} target="_blank" rel="noopener noreferrer"
 						   className={`text-xs ml-2 text-dark bg-primary p-2 rounded-full`}>
 							<span className="sr-only">Open website</span>
-							<FaInternetExplorer title={"Homepage"}/>
+							<MdOpenInNew title={"Homepage"}/>
 						</a>
 					}
 

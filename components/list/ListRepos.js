@@ -20,7 +20,7 @@ const ListRepos = ({repos, videos}) => {
     }
 
     return (
-        <div className={`grid gap-10 ${videos ? "grid-col-1 md:grid-cols-2" : "grid-cols-2"}`}>
+        <div className={`grid gap-10 grid-col md:grid-cols-2`}>
             {renderContent()}
         </div>
     )
