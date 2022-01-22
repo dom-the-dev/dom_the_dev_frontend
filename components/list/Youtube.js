@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const Youtube = ({vid}) => {
     const {snippet} = vid
-    const buttonStyle = `border border-t-0 flex-grow text-center py-2 font-bold uppercase hover:bg-primary transition-background duration-500 ease-in-out`
+    const buttonStyle = `border border-t-0 flex-grow text-center py-2 font-normal uppercase hover:bg-primary transition-background duration-500 ease-in-out`
 
     return (
         <div className={"border"}>

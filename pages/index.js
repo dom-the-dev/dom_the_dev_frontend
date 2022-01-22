@@ -6,15 +6,15 @@ import ContactForm from "../components/ContactForm";
 import Project from "../components/Project";
 
 export default function Home({repos, youtube}) {
+    console.log(repos)
     return (
         <Layout title={"Home"}>
             <Section id={"start"}>
                 <span className={"text-3xl"}>Welcome, I&apos;m</span>
-                <h1><span className={"font-bold"}>dom</span> <span className={"text-primary font-light"}>the dev</span>
+                <h1><span className={`font-normal`}>dom</span> <span className={"text-primary font-light"}>the dev</span>
                 </h1>
-                <p className={"text-3xl"}>A <span className="font-bold">Fullstack JavaScript Developer</span> never
-                    tired of learning and always up for new projects. <a
-                        href="#contact"><span className={"text-primary font-bold"}>#hmu</span></a></p>
+                <p className={"text-3xl"}>A <span className="font-normal">Fullstack JavaScript Developer</span> never
+                    tired of learning and always up for new projects.</p>
             </Section>
 
             <Section id={"projects"} title={"Projects."}>
@@ -35,41 +35,41 @@ export default function Home({repos, youtube}) {
 
             {/*<Section id={"about"} title={"about."}>*/}
             {/*    <p>*/}
-            {/*        Hi, I&apos;m <span className="font-bold">Dom</span> and I&apos;m a full stack developer from <span*/}
-            {/*        className="font-bold">Germany.</span>*/}
+            {/*        Hi, I&apos;m <span className="font-normal">Dom</span> and I&apos;m a full stack developer from <span*/}
+            {/*        className="font-normal">Germany.</span>*/}
             {/*    </p>*/}
 
             {/*    <p>*/}
-            {/*        After a <span className="font-bold">vocational training</span> in Germany&apos;s capital city*/}
+            {/*        After a <span className="font-normal">vocational training</span> in Germany&apos;s capital city*/}
             {/*        Berlin,*/}
-            {/*        I started my career as a <span className="font-bold">frontend*/}
-			{/*			developer</span> at the agency <span className="font-bold">SIRUP</span>.*/}
+            {/*        I started my career as a <span className="font-normal">frontend*/}
+			{/*			developer</span> at the agency <span className="font-normal">SIRUP</span>.*/}
             {/*    </p>*/}
 
             {/*    <p>*/}
-            {/*        <span className="font-bold">Five years</span> as a frontend developer later i decided to take the*/}
+            {/*        <span className="font-normal">Five years</span> as a frontend developer later i decided to take the*/}
             {/*        next step and started focusing on*/}
             {/*        learning full stack development.*/}
             {/*    </p>*/}
 
             {/*    <p>*/}
             {/*        Soon I passed the <span*/}
-            {/*        className="font-bold">Full Stack JavaScript Developer Nanodegree</span> at <span*/}
-            {/*        className="font-bold">Udacity</span> and started to call myself a Full Stack Developer.*/}
+            {/*        className="font-normal">Full Stack JavaScript Developer Nanodegree</span> at <span*/}
+            {/*        className="font-normal">Udacity</span> and started to call myself a Full Stack Developer.*/}
             {/*    </p>*/}
 
             {/*    <p>*/}
-            {/*        Since 2021 I am also working <span className="font-bold">self-employed</span> as a <span*/}
-            {/*        className="font-bold">full stack javascript developer</span>, <span*/}
-            {/*        className="font-bold">never tired</span> of learning and always up for*/}
-            {/*        <span className="font-bold"> new projects</span>.*/}
+            {/*        Since 2021 I am also working <span className="font-normal">self-employed</span> as a <span*/}
+            {/*        className="font-normal">full stack javascript developer</span>, <span*/}
+            {/*        className="font-normal">never tired</span> of learning and always up for*/}
+            {/*        <span className="font-normal"> new projects</span>.*/}
             {/*    </p>*/}
 
             {/*    <p>*/}
             {/*        If you are interested in working with me, feel free to use the <a*/}
-            {/*        href="#contact"><span className="font-bold text-primary">contact form</span></a> or write an*/}
+            {/*        href="#contact"><span className="font-normal text-primary">contact form</span></a> or write an*/}
             {/*        email to <span*/}
-            {/*        className="font-bold text-primary"><a href="mailto:hi@domthedev.com">hi@domthedev.com</a></span>.*/}
+            {/*        className="font-normal text-primary"><a href="mailto:hi@domthedev.com">hi@domthedev.com</a></span>.*/}
             {/*    </p>*/}
             {/*</Section>*/}
 
@@ -91,7 +91,7 @@ export default function Home({repos, youtube}) {
     )
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
     const latestGithub = await axios.get(process.env.NEXT_PUBLIC_GITHUB_API_URL + 'users/dom-the-dev/repos?per_page=6&sort=asc')
     const {data} = await axios.get(`${process.env.NEXT_PUBLIC_YT_API_URL}?key=${process.env.NEXT_PUBLIC_YT_API_KEY}&channelId=${process.env.NEXT_PUBLIC_YT_CHANNEL_ID}&part=snippet,id&order=date&maxResults=4`)
 

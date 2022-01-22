@@ -6,7 +6,7 @@ import Container from "./Container";
 import SocialMediaBadge from "../SocialMediaBadge";
 
 const Layout = ({title, children}) => (
-	<div className={"bg-dark text-white min-h-screen"}>
+	<div className={"text-dark min-h-screen"}>
 		<Head>
 			<title>{title} | Dom the dev</title>
 			<meta name="description" content="Blog/Portfolio of Dom the Dev"/>
@@ -33,7 +33,19 @@ const Layout = ({title, children}) => (
 			<link rel="shortcut icon" href="/favicon.ico" />
 			<link
 				rel="preload"
-				href="/fonts/Montserrat-Bold.ttf"
+				href="/fonts/Rubik/Rubik-Bold.ttf"
+				as="font"
+				crossOrigin=""
+			/>
+			<link
+				rel="preload"
+				href="/fonts/Rubik/Rubik-Light.ttf"
+				as="font"
+				crossOrigin=""
+			/>
+			<link
+				rel="preload"
+				href="/fonts/Rubik/Rubik-Regular.ttf"
 				as="font"
 				crossOrigin=""
 			/>

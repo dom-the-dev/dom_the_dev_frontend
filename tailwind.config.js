@@ -20,7 +20,7 @@ module.exports = {
 			secondary: '#63CCFF',
 			primary: '#00FFD1',
 			antoher: '#00D1FF',
-			dark: '#13202B'
+			dark: '#1E293B'
 		},
 		extend: {
 			animation: {

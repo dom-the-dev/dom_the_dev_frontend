@@ -11,7 +11,7 @@ const Project = ({title, description, url, image}) => {
                 </a>
             </Link>
             <div className={`p-5`}>
-                <h5 className={`uppercase font-bold`}>{title}</h5>
+                <h5 className={`uppercase font-normal`}>{title}</h5>
                 <div className={`h-1 bg-primary rounded mt-2 mb-5`}/>
                 {description}
                 <div className={`mt-3 text-right`}>

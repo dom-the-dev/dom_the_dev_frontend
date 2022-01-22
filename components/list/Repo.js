@@ -1,25 +1,36 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {FaGithub} from "@react-icons/all-files/fa/FaGithub";
+import {FaInternetExplorer} from "@react-icons/all-files/fa/FaInternetExplorer";
 
 const Repo = ({repo}) => {
-	const buttonStyle = `flex-grow text-center py-2 font-bold uppercase hover:bg-primary transition-background duration-500 ease-in-out`
 
 	return (
-		<div className={"flex border border-white break-words flex-col"}>
-			<div className={`p-4 flex flex-col flex-grow`}>
+		<div className={"flex border-t border-dark break-words flex-col pb-10 pt-10"}>
+			<div className={`flex flex-col flex-grow`}>
 				<h4>{repo.name}</h4>
-				<div className={`h-1 bg-primary rounded mt-2 mb-5`}/>
+				<div className={`h-1 w-20 bg-primary  mt-5 mb-3`}/>
 				<p>{repo.description}</p>
-				<div className={`flex justify-end`}>
-					<a href={repo.html_url} target="_blank" rel="noopener noreferrer" className={`text-dark bg-primary p-2`}>
-						<h4>code</h4>
+				<div className={`flex justify-start mt-2`}>
+					<a href={repo.html_url} target="_blank" rel="noopener noreferrer" className={`text-xs text-dark bg-primary p-2 rounded-full`}>
+						<span className="sr-only">See GitHub</span>
+						<FaGithub title={"GitHub Repository"}/>
 					</a>
 
 					{repo.has_pages &&
-					<a href={`https://dom-the-dev.github.io/${repo.name}`} target="_blank" rel="noopener noreferrer"
-					   className={`ml-2 text-dark bg-primary p-2`}>
-						<h4>demo</h4>
-					</a>
+						<a href={`https://dom-the-dev.github.io/${repo.name}`} target="_blank" rel="noopener noreferrer"
+						   className={`text-xsml-2 text-dark bg-primary p-2 rounded-full`}>
+							<span className="sr-only">Open website</span>
+							<FaInternetExplorer title={"GitHub Page"}/>
+						</a>
+					}
+
+					{repo.homepage &&
+						<a href={`https://dom-the-dev.github.io/${repo.name}`} target="_blank" rel="noopener noreferrer"
+						   className={`text-xs ml-2 text-dark bg-primary p-2 rounded-full`}>
+							<span className="sr-only">Open website</span>
+							<FaInternetExplorer title={"Homepage"}/>
+						</a>
 					}
 
 				</div>

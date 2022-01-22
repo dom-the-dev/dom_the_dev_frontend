@@ -7,7 +7,7 @@ const Footer = () => {
 		<footer className={"py-5"}>
 			<Container>
 					<div className={"text-center"}>
-						<div className={"font-bold"}>
+						<div className={"font-normal"}>
 							dom <span className={"font-thin text-primary"}>the dev</span>
 						</div>
 

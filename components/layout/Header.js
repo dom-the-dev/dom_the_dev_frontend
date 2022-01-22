@@ -12,7 +12,7 @@ const Header = () => {
 				<div className={"flex justify-between items-center"}>
 					<Link href="/">
 						<a>
-							<div className={"font-bold"}>
+							<div className={"font-normal text-white"}>
 								dom <span className={"font-thin text-primary"}>the dev</span>
 							</div>
 						</a>

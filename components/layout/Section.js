@@ -6,7 +6,7 @@ const Section = ({children, id, title, verticalCenter, moreLink, moreTitle}) => 
 		<div id={id} className={`flex ${verticalCenter ? "h-screen items-center" : "pt-20 pb-20"}`}>
 			<div className={"w-full"}>
 				<div className={`relative inline-block mb-8`}>
-					<h2 className={"relative font-bold inline-block"}>
+					<h2 className={"relative font-normal inline-block"}>
 						{title}
 					</h2>
 				</div>
