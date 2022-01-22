@@ -18,7 +18,7 @@ const Header = () => {
 						</a>
 					</Link>
 					<Burger navOpen={navOpen} setNavOpen={setNavOpen}/>
-					<NavBar navOpen={navOpen} setNavOpen={setNavOpen}/>
+					{/*<NavBar navOpen={navOpen} setNavOpen={setNavOpen}/>*/}
 				</div>
 			</Container>
 		</header>
