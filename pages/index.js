@@ -73,13 +73,13 @@ export default function Home({repos, youtube}) {
             {/*    </p>*/}
             {/*</Section>*/}
 
-            <Section id={"youtube"} title={"latest youtube videos."}
+            <Section id={"youtube"} title={"latest YouTube videos."}
                      moreLink={"https://www.youtube.com/channel/UCAa2t4QIxlaUuPO2FKq5TDw"}
                      moreTitle={"visit channel"}>
                 <ListRepos videos={youtube}/>
             </Section>
 
-            <Section id={"github"} title={"latest repos."} moreLink={"https://github.com/dom-the-dev/"}
+            <Section id={"github"} title={"latest GitHub repos."} moreLink={"https://github.com/dom-the-dev/"}
                      moreTitle={"see more"}>
                 <ListRepos repos={repos}/>
             </Section>
