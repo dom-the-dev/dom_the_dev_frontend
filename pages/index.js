@@ -19,6 +19,7 @@ export default function Home({repos, youtube}) {
     return (
         <Layout title={"Home"}>
             <Section id={"start"}>
+                <div className={`py-40`}>
                     <span className={"text-3xl"}>Welcome, I&apos;m</span>
                     <h1 className={`mt-3 mb-7`}><span className={`font-normal`}>dom</span> <span
                         className={"text-primary font-light"}>the dev</span>
@@ -26,7 +27,7 @@ export default function Home({repos, youtube}) {
                     <p className={"text-3xl"}>A <span
                         className="font-normal">Fullstack JavaScript Developer</span> never
                         tired of learning and always up for new projects.</p>
-
+                </div>
             </Section>
 
             <Section id={"projects"} title={"Projects."}>

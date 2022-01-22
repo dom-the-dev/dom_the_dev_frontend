@@ -8,24 +8,7 @@ import {RiSunLine} from "@react-icons/all-files/ri/RiSunLine";
 
 const Header = () => {
     const [navOpen, setNavOpen] = useState(false)
-    const [darkMode, setDarkMode] = useState(false)
 
-    useEffect(() => {
-        if (typeof window !== 'undefined' && localStorage.theme === "dark") {
-            setDarkMode(true)
-        }
-    }, []);
-
-    const switchDarkMode = () => {
-        if (darkMode) {
-            localStorage.removeItem("theme")
-        } else {
-            localStorage.setItem("theme", "dark")
-        }
-
-        setDarkMode(!darkMode)
-        document.documentElement.classList.toggle('dark')
-    }
 
     return (
         <header className={"bg-dark py-5 fixed w-full z-50"}>
@@ -38,21 +21,8 @@ const Header = () => {
                             </div>
                         </a>
                     </Link>
-                    <button className={`text-white`} onClick={switchDarkMode}>
-                        {darkMode ?
-                            <>
-                                <span className="sr-only">set light mode</span>
-                                <RiSunLine title={"Light on"}/>
-                            </>
-                            :
-                            <>
-                                <span className="sr-only">set dark mode</span>
-                                <FaGlasses title={"Light off"}/>
-                            </>
-                        }
-                    </button>
-                    {/*<Burger navOpen={navOpen} setNavOpen={setNavOpen}/>*/}
-                    {/*<NavBar navOpen={navOpen} setNavOpen={setNavOpen}/>*/}
+                    <Burger navOpen={navOpen} setNavOpen={setNavOpen}/>
+                    <NavBar navOpen={navOpen} setNavOpen={setNavOpen}/>
                 </div>
             </Container>
         </header>

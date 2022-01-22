@@ -16,7 +16,7 @@ const NavBarListItem = ({anchor, title, setNavOpen, navOpen, cta, link, newTab})
 			<a href={anchor}
 			   target={newTab ? "_blank" : "_self"}
 			   rel={"noreferrer"}
-			   className={`px-2 py-1  hover:text-primary ${cta ? "bg-primary text-dark hover:text-dark" : ""}`}
+			   className={`px-2 py-1  hover:text-primary ${cta ? "bg-primary rounded-2xl text-dark hover:text-dark" : ""}`}
 			   onClick={() => setNavOpen(!navOpen)}>
 				{title}
 			</a>

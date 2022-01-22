@@ -12,10 +12,9 @@ const NavBarList = ({setNavOpen, navOpen}) => {
 					<div className={`w-8 rounded h-0.5 bg-white mt-5 transform origin-top-left -rotate-45`}/>
 				</button>
 			</li>
-			{/*<NavBarListItem anchor={`#start`} title={`start`} navOpen={navOpen} setNavOpen={setNavOpen}/>*/}
-			{/*<NavBarListItem anchor={`#about`} title={`about`} navOpen={navOpen} setNavOpen={setNavOpen}/>*/}
-			{/*<NavBarListItem anchor={`#skills`} title={`skills`} navOpen={navOpen} setNavOpen={setNavOpen}/>*/}
-			{/*<NavBarListItem anchor={`#github`} title={`github`} navOpen={navOpen} setNavOpen={setNavOpen}/>*/}
+			<NavBarListItem anchor={`#projects`} title={`projects`} navOpen={navOpen} setNavOpen={setNavOpen}/>
+			<NavBarListItem anchor={`#youtube`} title={`youtube`} navOpen={navOpen} setNavOpen={setNavOpen}/>
+			<NavBarListItem anchor={`#github`} title={`github`} navOpen={navOpen} setNavOpen={setNavOpen}/>
 
 			<NavBarListItem cta={true} anchor={`#contact`} title={`contact`} navOpen={navOpen} setNavOpen={setNavOpen}/>
 		</ul>
