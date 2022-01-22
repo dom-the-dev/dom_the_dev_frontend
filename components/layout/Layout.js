@@ -28,7 +28,7 @@ const Layout = ({title, children}) => {
     }
 
     const DarkModeSwitch = () => (
-        <button className={`bg-primary text-2xl p-2 text-dark rounded-full fixed right-4 bottom-24 text-white`} onClick={switchDarkMode}>
+        <button className={`bg-primary text-2xl p-2 text-dark rounded-full fixed right-4 bottom-24 text-white z-50`} onClick={switchDarkMode}>
             {darkMode ?
                 <>
                     <span className="sr-only">set light mode</span>
