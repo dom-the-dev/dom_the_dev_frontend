@@ -1,3 +1,4 @@
+import {useEffect} from "react";
 import axios from "axios";
 import Layout from "../components/layout/Layout";
 import Section from "../components/layout/Section";
@@ -6,6 +7,15 @@ import ContactForm from "../components/ContactForm";
 import Project from "../components/Project";
 
 export default function Home({repos, youtube}) {
+
+    useEffect(() => {
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark')
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+    }, [])
+
     return (
         <Layout title={"Home"}>
             <Section id={"start"}>
@@ -17,7 +27,6 @@ export default function Home({repos, youtube}) {
                         className="font-normal">Fullstack JavaScript Developer</span> never
                         tired of learning and always up for new projects.</p>
 
-                <a href={"#projects"} className={`absolute bottom-10 left-1/2 transform -translate-x-1/2 down`}>next</a>
             </Section>
 
             <Section id={"projects"} title={"Projects."}>
@@ -34,7 +43,6 @@ export default function Home({repos, youtube}) {
                              image={"./spoti-fight.png"}
                     />
                 </div>
-                <a href={"#youtube"} className={`absolute bottom-10 left-1/2 transform -translate-x-1/2 down`}>next</a>
             </Section>
 
             {/*<Section id={"about"} title={"about."}>*/}
@@ -81,14 +89,12 @@ export default function Home({repos, youtube}) {
                      moreLink={"https://www.youtube.com/channel/UCAa2t4QIxlaUuPO2FKq5TDw"}
                      moreTitle={"visit channel"}>
                 <ListRepos videos={youtube}/>
-                <a href={"#github"} className={`absolute bottom-10 left-1/2 transform -translate-x-1/2 down`}>next</a>
             </Section>
 
             <Section id={"github"} title={"latest GitHub repos."} secondary={true}
                      moreLink={"https://github.com/dom-the-dev/"}
                      moreTitle={"see more"}>
                 <ListRepos repos={repos}/>
-                <a href={"#contact"} className={`absolute bottom-10 left-1/2 transform -translate-x-1/2 down`}>next</a>
             </Section>
 
             <Section id={"contact"} title={"contact."}>

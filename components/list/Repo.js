@@ -5,7 +5,7 @@ import {MdOpenInNew} from "@react-icons/all-files/md/MdOpenInNew";
 
 const Repo = ({repo}) => {
 	return (
-		<div className={"flex border-t border-dark break-words flex-col pb-5 pt-10"}>
+		<div className={"flex border-t border-dark dark:border-white break-words flex-col pb-5 pt-10"}>
 			<div className={`flex flex-col flex-grow`}>
 				<h4>{repo.name}</h4>
 				<div className={`h-1 w-20 bg-primary  mt-5 mb-3`}/>

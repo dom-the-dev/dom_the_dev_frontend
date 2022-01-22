@@ -6,7 +6,7 @@ import Container from "./Container";
 import SocialMediaBadge from "../SocialMediaBadge";
 
 const Layout = ({title, children}) => (
-	<div className={"text-dark min-h-screen"}>
+	<div className={"text-dark dark:text-white min-h-screen"}>
 		<Head>
 			<title>{title} | Dom the dev</title>
 			<meta name="description" content="Blog/Portfolio of Dom the Dev"/>
@@ -53,7 +53,7 @@ const Layout = ({title, children}) => (
 
 		<Header/>
 
-		<main className={"h-full bg-white"}>
+		<main className={"h-full bg-white dark:bg-dark"}>
 			<SocialMediaBadge/>
 			<Container>
 				{children}

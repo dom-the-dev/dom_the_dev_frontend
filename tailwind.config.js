@@ -2,7 +2,7 @@ const colors = require('tailwindcss/colors')
 
 module.exports = {
 	purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
-	darkMode: false, // or 'media' or 'class'
+	darkMode: 'class',
 	theme: {
 		container: {
 			center: true,
@@ -17,10 +17,10 @@ module.exports = {
 			current: 'currentColor',
 			black: colors.black,
 			white: colors.white,
-			secondary: '#63CCFF',
 			primary: '#00FFD1',
-			antoher: '#00D1FF',
-			dark: '#1E293B'
+			dark: '#1E293B',
+			mid: '#CBD5E1',
+			light: '#FFFFFF'
 		},
 		extend: {
 			animation: {

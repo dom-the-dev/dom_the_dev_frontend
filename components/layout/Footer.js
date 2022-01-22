@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 const Footer = () => {
 	return (
-		<footer className={"py-5"}>
+		<footer className={"py-5 bg-dark dark:bg-white text-white dark:text-dark"}>
 			<Container>
 					<div className={"text-center"}>
 						<div className={"font-normal"}>
