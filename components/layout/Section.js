@@ -3,15 +3,15 @@ import PropTypes from 'prop-types';
 
 const Section = ({children, id, title, verticalCenter, moreLink, moreTitle}) => {
 	return (
-		<div id={id} className={`flex ${verticalCenter ? "h-screen items-center" : "pt-20 pb-20"}`}>
+		<div id={id} className={`bg-white w-full h-full flex ${verticalCenter ? "h-screen items-center" : "pt-20 pb-20"}`}>
 			<div className={"w-full"}>
-				<div className={`relative inline-block mb-8`}>
+				<div className={`relative inline-block ${moreLink ? "mb-0" : "mb-8"}`}>
 					<h2 className={"relative font-normal inline-block"}>
 						{title}
 					</h2>
 				</div>
 				{moreLink && moreTitle &&
-				<a className={"ml-3 text-primary hover:underline"}
+				<a className={"inline-block mb-10 md:ml-3 text-primary hover:underline"}
 				   target={"_blank"}
 				   rel={"noreferrer noopener"}
 				   href={moreLink}>

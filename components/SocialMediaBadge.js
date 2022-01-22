@@ -9,12 +9,12 @@ const SocialMediaBadge = () => {
     const [show, setShow] = useState(false)
 
     return (
-        <div className={"fixed right-14  bottom-20 transform -translate-y-1/2 z-50 text-white"}>
+        <div className={"fixed right-14 bottom-20 transform -translate-y-1/2 z-50 text-white"}>
             <a href={"https://twitter.com/Dom_TheDev"}
                rel="noreferrer noopener"
                target="_blank"
                title="Twitter"
-               className={`text-xs flex justify-center items-center w-10 h-10 bg-primary absolute transition-all ${show ? " -top-16 opacity-100" : "top-0 opacity-0 pointer-events-none"}`}
+               className={`rounded-full text-xs flex justify-center items-center w-10 h-10 bg-primary absolute transition-all ${show ? " -top-16 opacity-100" : "top-0 opacity-0 pointer-events-none"}`}
                style={{backgroundColor: '#1A8CD8'}}
             >
                 <span className="sr-only">Twitter</span>
@@ -25,7 +25,7 @@ const SocialMediaBadge = () => {
                rel="noreferrer noopener"
                target="_blank"
                title="Twitter"
-               className={`text-xs flex justify-center items-center w-10 h-10 bg-primary absolute  ${show ? " -top-16 right-7 opacity-100" : "top-0 opacity-0 pointer-events-none"}`}
+               className={`rounded-full text-xs flex justify-center items-center w-10 h-10 bg-primary absolute  ${show ? " -top-16 right-7 opacity-100" : "top-0 opacity-0 pointer-events-none"}`}
                style={{backgroundColor: '#EE0007'}}
             >
                 <span className="sr-only">YouTube</span>
@@ -36,14 +36,14 @@ const SocialMediaBadge = () => {
                rel="noreferrer noopener"
                target="_blank"
                title="GitHub"
-               className={`flex justify-center items-center w-10 h-10 absolute transition-all ${show ? "right-7  opacity-100" : "right-0  opacity-0 pointer-events-none"}`}
+               className={`rounded-full flex justify-center items-center w-10 h-10 absolute transition-all ${show ? "right-7  opacity-100" : "right-0  opacity-0 pointer-events-none"}`}
                style={{backgroundColor: '#161B22'}}
             >
                 <span className="sr-only">GitHub</span>
                 <FaGithub/>
             </a>
 
-            <div className={`group absolute w-10 h-10 bg-primary ${show && "animate-spin-slow"}`}>
+            <div className={`group rounded-full absolute w-10 h-10 bg-primary ${show && "animate-spin-slow"}`}>
             </div>
 
             <button

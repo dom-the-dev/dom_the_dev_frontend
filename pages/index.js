@@ -6,7 +6,6 @@ import ContactForm from "../components/ContactForm";
 import Project from "../components/Project";
 
 export default function Home({repos, youtube}) {
-    console.log(repos)
     return (
         <Layout title={"Home"}>
             <Section id={"start"}>
@@ -18,15 +17,15 @@ export default function Home({repos, youtube}) {
             </Section>
 
             <Section id={"projects"} title={"Projects."}>
-                <div className={`grid gap-2 grid-col-1 md:grid-cols-2`}>
+                <div className={`grid gap-10 grid-cols-1`}>
                     <Project title={"movie-slap"}
-                             description={"Browse Movies and create your Movie Watchlist. Use the 'Movie-Slap' to Tinder through random videos."}
+                             description={"Browse Movies and create your Movie Watchlist. Use the 'Movie-Slap' to Tinder through random videos. Fullstack application made with Supabase Authenticaion and Database. NextJS used for the frontend."}
                              url={"https://movie-slap.vercel.app/"}
                              image={"./movie-slap.png"}
                     />
 
                     <Project title={"Spoti Fight"}
-                             description={"Spotify Game "}
+                             description={"Spotify Game made with React and the Spotify API. 2 Players can choose an artist and battle each other in different categories."}
                              url={"https://spoti-fight.vercel.app/"}
                              image={"./spoti-fight.png"}
                     />

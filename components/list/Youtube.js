@@ -7,7 +7,7 @@ const Youtube = ({vid}) => {
     const {snippet} = vid
 
     return (
-        <div className={"flex border-t border-dark break-words flex-col-reverse sm:flex-row pb-10 pt-10 justify-between"}>
+        <div className={"flex border-t border-dark break-words flex-col-reverse sm:flex-row pb-5 pt-10 justify-between"}>
             <div className={`flex flex-col`}>
                 <h4>{snippet.title}</h4>
                 <div className={`h-1 w-20 bg-primary  mt-5 mb-3`}/>
