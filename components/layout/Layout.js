@@ -53,7 +53,7 @@ const Layout = ({title, children}) => (
 
 		<Header/>
 
-		<main className={"pt-20 h-full bg-white"}>
+		<main className={"h-full bg-white"}>
 			<SocialMediaBadge/>
 			<Container>
 				{children}

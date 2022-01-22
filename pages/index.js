@@ -9,11 +9,15 @@ export default function Home({repos, youtube}) {
     return (
         <Layout title={"Home"}>
             <Section id={"start"}>
-                <span className={"text-3xl"}>Welcome, I&apos;m</span>
-                <h1><span className={`font-normal`}>dom</span> <span className={"text-primary font-light"}>the dev</span>
-                </h1>
-                <p className={"text-3xl"}>A <span className="font-normal">Fullstack JavaScript Developer</span> never
-                    tired of learning and always up for new projects.</p>
+                    <span className={"text-3xl"}>Welcome, I&apos;m</span>
+                    <h1 className={`mt-3 mb-7`}><span className={`font-normal`}>dom</span> <span
+                        className={"text-primary font-light"}>the dev</span>
+                    </h1>
+                    <p className={"text-3xl"}>A <span
+                        className="font-normal">Fullstack JavaScript Developer</span> never
+                        tired of learning and always up for new projects.</p>
+
+                <a href={"#projects"} className={`absolute bottom-10 left-1/2 transform -translate-x-1/2 down`}>next</a>
             </Section>
 
             <Section id={"projects"} title={"Projects."}>
@@ -30,6 +34,7 @@ export default function Home({repos, youtube}) {
                              image={"./spoti-fight.png"}
                     />
                 </div>
+                <a href={"#youtube"} className={`absolute bottom-10 left-1/2 transform -translate-x-1/2 down`}>next</a>
             </Section>
 
             {/*<Section id={"about"} title={"about."}>*/}
@@ -42,7 +47,7 @@ export default function Home({repos, youtube}) {
             {/*        After a <span className="font-normal">vocational training</span> in Germany&apos;s capital city*/}
             {/*        Berlin,*/}
             {/*        I started my career as a <span className="font-normal">frontend*/}
-			{/*			developer</span> at the agency <span className="font-normal">SIRUP</span>.*/}
+            {/*			developer</span> at the agency <span className="font-normal">SIRUP</span>.*/}
             {/*    </p>*/}
 
             {/*    <p>*/}
@@ -76,11 +81,14 @@ export default function Home({repos, youtube}) {
                      moreLink={"https://www.youtube.com/channel/UCAa2t4QIxlaUuPO2FKq5TDw"}
                      moreTitle={"visit channel"}>
                 <ListRepos videos={youtube}/>
+                <a href={"#github"} className={`absolute bottom-10 left-1/2 transform -translate-x-1/2 down`}>next</a>
             </Section>
 
-            <Section id={"github"} title={"latest GitHub repos."} secondary={true} moreLink={"https://github.com/dom-the-dev/"}
+            <Section id={"github"} title={"latest GitHub repos."} secondary={true}
+                     moreLink={"https://github.com/dom-the-dev/"}
                      moreTitle={"see more"}>
                 <ListRepos repos={repos}/>
+                <a href={"#contact"} className={`absolute bottom-10 left-1/2 transform -translate-x-1/2 down`}>next</a>
             </Section>
 
             <Section id={"contact"} title={"contact."}>
