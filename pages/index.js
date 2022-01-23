@@ -86,11 +86,11 @@ export default function Home({repos, youtube}) {
             {/*    </p>*/}
             {/*</Section>*/}
 
-            <Section id={"youtube"} title={"latest YouTube videos."}
-                     moreLink={"https://www.youtube.com/channel/UCAa2t4QIxlaUuPO2FKq5TDw"}
-                     moreTitle={"visit channel"}>
-                <ListRepos videos={youtube}/>
-            </Section>
+            {/*<Section id={"youtube"} title={"latest YouTube videos."}*/}
+            {/*         moreLink={"https://www.youtube.com/channel/UCAa2t4QIxlaUuPO2FKq5TDw"}*/}
+            {/*         moreTitle={"visit channel"}>*/}
+            {/*    <ListRepos videos={youtube}/>*/}
+            {/*</Section>*/}
 
             <Section id={"github"} title={"latest GitHub repos."} secondary={true}
                      moreLink={"https://github.com/dom-the-dev/"}
@@ -107,12 +107,12 @@ export default function Home({repos, youtube}) {
 
 export async function getServerSideProps() {
     const latestGithub = await axios.get(process.env.NEXT_PUBLIC_GITHUB_API_URL + 'users/dom-the-dev/repos?per_page=4&sort=asc')
-    const latestYouTube = await axios.get(`${process.env.NEXT_PUBLIC_YT_API_URL}?key=${process.env.NEXT_PUBLIC_YT_API_KEY}&channelId=${process.env.NEXT_PUBLIC_YT_CHANNEL_ID}&part=snippet,id&order=date&maxResults=4`)
+    // const latestYouTube = await axios.get(`${process.env.NEXT_PUBLIC_YT_API_URL}?key=${process.env.NEXT_PUBLIC_YT_API_KEY}&channelId=${process.env.NEXT_PUBLIC_YT_CHANNEL_ID}&part=snippet,id&order=date&maxResults=4`)
 
     return {
         props: {
             repos: latestGithub.data,
-            youtube: latestYouTube.data.items.filter(item => item.id.kind === 'youtube#video')
+            // youtube: latestYouTube.data.items.filter(item => item.id.kind === 'youtube#video')
         },
     }
 }
