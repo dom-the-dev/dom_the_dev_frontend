@@ -56,7 +56,7 @@ const NavBarList = ({setNavOpen, navOpen}) => {
             </li>
 
             <NavBarListItem anchor={`#projects`} title={`projects`} navOpen={navOpen} setNavOpen={setNavOpen}/>
-            <NavBarListItem anchor={`#youtube`} title={`youtube`} navOpen={navOpen} setNavOpen={setNavOpen}/>
+            {/*<NavBarListItem anchor={`#youtube`} title={`youtube`} navOpen={navOpen} setNavOpen={setNavOpen}/>*/}
             <NavBarListItem anchor={`#github`} title={`github`} navOpen={navOpen} setNavOpen={setNavOpen}/>
 
             <NavBarListItem cta={true} anchor={`#contact`} title={`contact`} navOpen={navOpen} setNavOpen={setNavOpen}/>
