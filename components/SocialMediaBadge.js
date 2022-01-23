@@ -15,7 +15,7 @@ const SocialMediaBadge = () => {
                rel="noreferrer noopener"
                target="_blank"
                title="Twitter"
-               className={`rounded-full flex justify-center items-center w-10 h-10 absolute transition-all ${show ? " -top-12 opacity-100" : "top-0 opacity-0 pointer-events-none"}`}
+               className={`rounded-full flex justify-center items-center w-10 h-10 absolute transition-all duration-700 ${show ? "bottom-4 opacity-100" : "-bottom-10 opacity-0 pointer-events-none"}`}
                style={{backgroundColor: '#1A8CD8'}}
             >
                 <span className="sr-only">Twitter</span>
@@ -26,7 +26,7 @@ const SocialMediaBadge = () => {
                rel="noreferrer noopener"
                target="_blank"
                title="Twitter"
-               className={`rounded-full flex justify-center items-center w-10 h-10 transition-all absolute  ${show ? " -top-24 opacity-100" : "top-0 opacity-0 pointer-events-none"}`}
+               className={`rounded-full flex justify-center items-center w-10 h-10 transition-all absolute duration-700 ${show ? "bottom-16 opacity-100" : "opacity-0 -bottom-10 pointer-events-none"}`}
                style={{backgroundColor: '#EE0007'}}
             >
                 <span className="sr-only">YouTube</span>
@@ -37,7 +37,7 @@ const SocialMediaBadge = () => {
                rel="noreferrer noopener"
                target="_blank"
                title="GitHub"
-               className={`rounded-full flex justify-center items-center w-10 h-10 transition-all absolute ${show ? "-top-36 opacity-100" : "opacity-0 pointer-events-none"}`}
+               className={`rounded-full flex justify-center items-center w-10 h-10 transition-all duration-700 absolute ${show ? "bottom-28 opacity-100" : "opacity-0 -bottom-10 pointer-events-none"}`}
                style={{backgroundColor: '#161B22'}}
             >
                 <span className="sr-only">GitHub</span>
@@ -48,21 +48,21 @@ const SocialMediaBadge = () => {
                rel="noreferrer noopener"
                target="_blank"
                title="DEV.to"
-               className={`rounded-full flex justify-center items-center w-10 h-10 transition-all absolute ${show ? "-top-48 opacity-100" : "opacity-0 pointer-events-none"}`}
+               className={`rounded-full flex justify-center items-center w-10 h-10 transition-all duration-700 absolute ${show ? "bottom-40 opacity-100" : "opacity-0 -bottom-10 pointer-events-none"}`}
                style={{backgroundColor: '#000000'}}
             >
                 <span className="sr-only">DEV</span>
                 <FaDev/>
             </a>
 
-            <div className={`group rounded-full absolute w-10 h-10 border border-primary bg-primary ${show && "animate-spin-slow"}`}>
+            <div className={`group rounded-full absolute w-10 h-10 border border-primary bg-primary`}>
             </div>
 
             <button
                 type="button"
                 title="toggle social media icons"
                 onClick={() => setShow(!show)}
-                className={`absolute ${show ? "text-white hover:text-dark" : "text-dark"} w-10 h-10 flex justify-center items-center transform -rotate-12 hover:text-white`}>
+                className={`absolute ${show ? "text-white hover:text-dark" : "text-dark"} w-10 h-10 flex justify-center items-center transform hover:text-white`}>
                 <span className="sr-only">Social Media Menu</span>
                 {show ?
                     <>
