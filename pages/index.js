@@ -98,7 +98,7 @@ export default function Home({repos, youtube}) {
                 <ListRepos repos={repos}/>
             </Section>
 
-            <Section id={"contact"} title={"contact."}>
+            <Section id={"contact"} title={"contact. "}>
                 <ContactForm/>
             </Section>
         </Layout>
