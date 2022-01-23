@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import NavBarList from "./NavBarList";
 
-const NavBar = ({navOpen, setNavOpen}) => (
+const NavBar = ({navOpen, setNavOpen, DarkModeSwitch}) => (
 	<div className={`transition-transform transform ease-in ease-out duration-300 ${navOpen ? "" : "-translate-y-full md:-translate-y-0"} 
                     md:translate-x-0 md:block 
                     fixed md:static 

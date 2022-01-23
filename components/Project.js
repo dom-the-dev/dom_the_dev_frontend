@@ -1,5 +1,4 @@
 import React from 'react';
-import {AiFillYoutube} from "@react-icons/all-files/ai/AiFillYoutube";
 import {MdOpenInNew} from "@react-icons/all-files/md/MdOpenInNew";
 
 const Project = ({title, description, url, image}) => {
@@ -18,7 +17,7 @@ const Project = ({title, description, url, image}) => {
                     <div className={`h-1 w-20 bg-primary  mt-5 mb-3`}/>
                     {description}
                     <div className={`mt-10`}>
-                        <a href={url} className={`inline-block rounded-full text-dark  bg-primary p-2`} target="_blank"
+                        <a href={url} className={`p-2 inline-block rounded-full border transition border border-primary text-dark dark:text-primary bg:text-primary bg-primary dark:bg-transparent hover:bg-transparent dark:hover:bg-primary dark:hover:text-dark`} target="_blank"
                            rel={"noopener noreferrer"}>
                             <span className="sr-only">Visit</span>
                             <MdOpenInNew title={"Homepage"}/>

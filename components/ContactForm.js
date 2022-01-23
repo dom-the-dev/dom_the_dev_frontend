@@ -15,9 +15,9 @@ const ContactForm = () => {
                 <br/>
                 <button
                     type="submit"
-                    className={"px-2 py-1 bg-dark md:bg-primary text-dark hover:text-dark rounded-2xl"}
+                    className={"rounded-2xl px-3 py-1 transition border border-primary text-dark dark:text-primary bg:text-primary bg-primary dark:bg-transparent hover:bg-transparent dark:hover:bg-primary dark:hover:text-dark"}
                 >
-                    Send
+                    send
                 </button>
             </form>
         </div>

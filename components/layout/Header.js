@@ -9,7 +9,6 @@ import {RiSunLine} from "@react-icons/all-files/ri/RiSunLine";
 const Header = () => {
     const [navOpen, setNavOpen] = useState(false)
 
-
     return (
         <header className={"bg-dark py-5 fixed w-full z-50"}>
             <Container>
@@ -21,6 +20,7 @@ const Header = () => {
                             </div>
                         </a>
                     </Link>
+
                     <Burger navOpen={navOpen} setNavOpen={setNavOpen}/>
                     <NavBar navOpen={navOpen} setNavOpen={setNavOpen}/>
                 </div>

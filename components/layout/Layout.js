@@ -8,42 +8,7 @@ import {RiSunLine} from "@react-icons/all-files/ri/RiSunLine";
 import {FaGlasses} from "@react-icons/all-files/fa/FaGlasses";
 
 const Layout = ({title, children}) => {
-    const [darkMode, setDarkMode] = useState(false)
-
-    useEffect(() => {
-        if (typeof window !== 'undefined' && localStorage.theme === "dark") {
-            setDarkMode(true)
-        }
-    }, []);
-
-    const switchDarkMode = () => {
-        if (darkMode) {
-            localStorage.removeItem("theme")
-        } else {
-            localStorage.setItem("theme", "dark")
-        }
-
-        setDarkMode(!darkMode)
-        document.documentElement.classList.toggle('dark')
-    }
-
-    const DarkModeSwitch = () => (
-        <button className={`bg-primary text-2xl p-2 text-dark rounded-full fixed right-4 bottom-24 text-white z-50`} onClick={switchDarkMode}>
-            {darkMode ?
-                <>
-                    <span className="sr-only">set light mode</span>
-                    <RiSunLine title={"Light on"}/>
-                </>
-                :
-                <>
-                    <span className="sr-only">set dark mode</span>
-                    <FaGlasses title={"Light off"}/>
-                </>
-            }
-        </button>
-    )
-
-    return (<div className={"text-dark dark:text-white min-h-screen"}>
+        return (<div className={"text-dark dark:text-white min-h-screen"}>
             <Head>
                 <title>{title} | Dom the dev</title>
                 <meta name="description" content="Blog/Portfolio of Dom the Dev"/>
@@ -91,7 +56,6 @@ const Layout = ({title, children}) => {
 
             <main className={"h-full bg-white dark:bg-dark"}>
                 <SocialMediaBadge/>
-                <DarkModeSwitch/>
                 <Container>
                     {children}
                 </Container>

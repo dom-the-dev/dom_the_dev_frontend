@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Image from 'next/image';
 import {AiFillYoutube} from "@react-icons/all-files/ai/AiFillYoutube";
 
 const Youtube = ({vid}) => {
@@ -13,7 +12,7 @@ const Youtube = ({vid}) => {
                 <div className={`h-1 w-20 bg-primary  mt-5 mb-3`}/>
                 <p>{snippet.description}</p>
                 <div className={`mt-5`}>
-                    <a className={`text-sm inline-block rounded-full text-dark bg-primary p-2`}
+                    <a className={`inline-block text-xs p-2 rounded-full transition border transition border border-primary text-dark dark:text-primary bg:text-primary bg-primary dark:bg-transparent hover:bg-transparent dark:hover:bg-primary dark:hover:text-dark`}
                        href={`https://www.youtube.com/watch?v=${vid.id.videoId}`} target="_blank"
                        rel="noopener noreferrer">
                         <AiFillYoutube/>
