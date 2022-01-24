@@ -1,10 +1,10 @@
 import React from 'react';
 import {MdOpenInNew} from "@react-icons/all-files/md/MdOpenInNew";
 
-const Project = ({title, description, url, image}) => {
+const Project = ({title, description, url, image, reverse}) => {
     return (
         <div
-            className={"flex border-t border-dark dark:border-white break-words flex-col sm:flex-row pb-5 pt-10 justify-between"}>
+            className={`flex border-t border-dark dark:border-white break-words flex-col ${reverse ? "sm:flex-row" :"sm:flex-row-reverse"} pb-5 pt-10 justify-between`}>
 
             <a className={`w-full md:w-1/2`} href={url} target="_blank" rel={"noopener noreferrer"}>
                 <div className={`flex justify-center mb-10 sm:mb-0 sm:ml-5`}>

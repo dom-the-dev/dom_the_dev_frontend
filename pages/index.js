@@ -42,6 +42,13 @@ export default function Home({repos, youtube}) {
                              description={"Spotify Game made with React and the Spotify API. 2 Players can choose an artist and battle each other in different categories."}
                              url={"https://spoti-fight.vercel.app/"}
                              image={"./spoti-fight.png"}
+                             reverse={true}
+                    />
+
+                    <Project title={"Save the mix"}
+                             description={"React Appilcation which uses the Spotify API to help you save spotify mixes like weekly discover before they change"}
+                             url={"https://save-the-mix.vercel.app/"}
+                             image={"./save-the-mix.png"}
                     />
                 </div>
             </Section>
