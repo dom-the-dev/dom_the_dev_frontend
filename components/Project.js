@@ -12,7 +12,7 @@ const Project = ({title, description, url, image, reverse}) => {
                 </div>
             </a>
             <div className={`flex flex-col md:w-1/2`}>
-                <div className={`sm:ml-10`}>
+                <div className={` ${reverse ? "sm:ml-10" : "sm:mr-10"}`}>
                     <h4>{title}</h4>
                     <div className={`h-1 w-20 bg-primary  mt-5 mb-3`}/>
                     {description}
