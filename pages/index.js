@@ -32,6 +32,13 @@ export default function Home({repos, youtube}) {
 
             <Section id={"projects"} title={"Projects."}>
                 <div className={`grid gap-10 grid-cols-1`}>
+                    <Project title={"tailymate"}
+                             description={"Ready to copy animations (not only) for TailwindCSS."}
+                             url={"https://tailymate.vercel.app/"}
+                             image={"./tailymate.png"}
+                             reverse={true}
+                    />
+
                     <Project title={"movie-slap"}
                              description={"Browse Movies and create your Movie Watchlist. Use the 'Movie-Slap' to Tinder through random videos. Fullstack application made with Supabase Authenticaion and Database. NextJS used for the frontend."}
                              url={"https://movie-slap.vercel.app/"}
