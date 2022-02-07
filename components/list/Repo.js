@@ -25,7 +25,7 @@ const Repo = ({repo}) => {
 					}
 
 					{repo.homepage &&
-						<a href={repo.homepage} target="_blank" rel="noopener noreferrer"
+						<a href={repo.homepage.startsWith("http") ? repo.homepage : `https://${repo.homepage}`} target="_blank" rel="noopener noreferrer"
 						   className={`ml-2 text-xs p-2 rounded-full transition border dark:border-primary hover:border-primary text-dark dark:text-primary hover:text-primary bg:text-primary bg-transparent hover:bg-transparent dark:hover:bg-primary dark:hover:text-dark`}>
 							<span className="sr-only">Open website</span>
 							<MdOpenInNew title={"Homepage"}/>
