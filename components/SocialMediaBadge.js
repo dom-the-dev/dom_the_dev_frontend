@@ -44,7 +44,7 @@ const SocialMediaBadge = () => {
                 <FaGithub/>
             </a>
 
-            <a href={"https://dev.to/"}
+            <a href={"https://dev.to/dom_the_dev"}
                rel="noreferrer noopener"
                target="_blank"
                title="DEV.to"
