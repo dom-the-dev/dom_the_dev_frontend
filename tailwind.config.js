@@ -21,7 +21,9 @@ module.exports = {
 			dark: '#1E293B',
 			// dark: '#13202B',
 			mid: '#CBD5E1',
-			light: '#FFFFFF'
+			light: '#FFFFFF',
+			cyan: colors.cyan,
+			blue: colors.blue
 		},
 		extend: {
 			animation: {
