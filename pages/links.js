@@ -66,6 +66,14 @@ const Links = () => {
                             <a className={`hover:text-primary transition-all bg-white p-3 rounded-3xl text-sm my-2 font-bold tracking-wider w-full block`}
                                target={"_blank"} rel={"noreferrer noopener"} href="https://tailymate.com">Tailymate</a>
                         </li>
+                        <li>
+                            <a className={`hover:text-primary transition-all bg-white p-3 rounded-3xl text-sm my-2 font-bold tracking-wider w-full block`}
+                               target={"_blank"} rel={"noreferrer noopener"} href="https://app.gumroad.com/domthedev">Gumroad</a>
+                        </li>
+                        <li>
+                            <a className={`hover:text-primary transition-all bg-white p-3 rounded-3xl text-sm my-2 font-bold tracking-wider w-full block`}
+                               target={"_blank"} rel={"noreferrer noopener"} href="https://domthedev.gumroad.com/l/tailor">Free Template</a>
+                        </li>
                     </ul>
                 </div>
             </div>
