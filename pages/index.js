@@ -41,7 +41,7 @@ export default function Home({repos, youtube}) {
 
                     <Project title={"movie-slap"}
                              description={"Browse Movies and create your Movie Watchlist. Use the 'Movie-Slap' to Tinder through random videos. Fullstack application made with Supabase Authenticaion and Database. NextJS used for the frontend."}
-                             url={"https://movie-slap.com/"}
+                             url={"https://movie-slap.vercel.app/"}
                              image={"./movie-slap.png"}
                     />
 
