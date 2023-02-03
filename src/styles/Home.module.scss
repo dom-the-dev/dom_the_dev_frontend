@@ -1,8 +1,11 @@
-
+.layout {
+  width: calc(100% - 30px);
+  margin: 0 auto;
+}
 
 .logo {
   background-color: white;
-  position: fixed;
+  position: absolute;
   bottom: 1rem;
   left: 1rem;
   display: flex;
@@ -38,6 +41,7 @@
 }
 
 .page {
+  position: relative;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -56,10 +60,6 @@
   border: none;
   outline: none;
 
-  &.next {
-    margin-top: 15px;
-  }
-
   &:hover {
     color: #FFD100;
   }
@@ -68,4 +68,23 @@
 .list {
   list-style: none;
   text-align: center;
+}
+
+.work {
+  display: block;
+  margin-bottom: 10px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 12px;
+  }
+}
+
+.linkWrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 15px;
+  font-size: 14px;
+  position: absolute;
+  bottom: 1rem;
 }
