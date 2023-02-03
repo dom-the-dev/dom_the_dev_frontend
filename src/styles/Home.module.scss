@@ -1,6 +1,11 @@
 .layout {
   width: calc(100% - 30px);
   margin: 0 auto;
+
+
+  @media screen and (max-width: 768px) {
+    font-size: 12px;
+  }
 }
 
 .logo {
@@ -80,11 +85,16 @@
 }
 
 .work {
+  position: relative;
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 
-  @media screen and (max-width: 768px) {
-    font-size: 12px;
+  &::after {
+    content: '-';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 

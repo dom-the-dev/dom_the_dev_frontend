@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import {Roboto_Slab} from '@next/font/google'
 import styles from '@/styles/Home.module.scss'
-import {FC, useEffect, useRef} from "react";
+import {FC, useRef} from "react";
 
 const robotoSlab = Roboto_Slab({subsets: ['latin']})
 
@@ -201,11 +201,12 @@ const Home: FC<IHomeProps> = ({devArticles, youtubeVids, githubRepos}) => {
         </div>
 
         <div id={'contact'} ref={contact} className={styles.page}>
+          <h2 className={styles.subtitle}>contact.</h2>
           <ul className={styles.list}>
-            <li><a target={'_blank'} rel="noreferrer" href="mailto:hi@domthedev.com">hi@domthedev.com</a></li>
-            <li><a target={'_blank'} rel="noreferrer" href="https://www.youtube.com/domthedeveloper">youtube</a></li>
-            <li><a target={'_blank'} rel="noreferrer" href="https://github.com/dom-the-dev/">github</a></li>
-            <li><a target={'_blank'} rel="noreferrer" href="https://dev.to/dom_the_dev">dev.to</a></li>
+            <li><a className={styles.work} target={'_blank'} rel="noreferrer" href="mailto:hi@domthedev.com">hi@domthedev.com</a></li>
+            <li><a className={styles.work} target={'_blank'} rel="noreferrer" href="https://www.youtube.com/domthedeveloper">youtube</a></li>
+            <li><a className={styles.work} target={'_blank'} rel="noreferrer" href="https://github.com/dom-the-dev/">github</a></li>
+            <li><a className={styles.work} target={'_blank'} rel="noreferrer" href="https://dev.to/dom_the_dev">dev.to</a></li>
           </ul>
           <div className={styles.linkWrapper}>
             <button className={`${styles.link} ${styles.next} ${robotoSlab.className}`}
