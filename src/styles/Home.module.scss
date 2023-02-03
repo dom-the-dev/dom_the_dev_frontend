@@ -88,14 +88,16 @@
 .work {
   position: relative;
   display: block;
-  margin-bottom: 12px;
+  margin-bottom: 6px;
+  margin-top: 6px;
 
+  &::before,
   &::after {
-    content: '-';
+    content: '•';
     position: absolute;
-    bottom: -15px;
-    left: 50%;
-    transform: translateX(-50%);
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
   }
 }
 

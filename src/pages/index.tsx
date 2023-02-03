@@ -1,9 +1,10 @@
 import Head from 'next/head'
-import {Roboto_Slab} from '@next/font/google'
+import {Roboto_Slab, Roboto} from '@next/font/google'
 import styles from '@/styles/Home.module.scss'
 import React, {FC, useRef, useState} from "react";
 
 const robotoSlab = Roboto_Slab({subsets: ['latin']})
+const roboto = Roboto({weight: "300", subsets: ['latin']})
 
 interface IArticle {
   id: string;
@@ -107,7 +108,7 @@ const Home: FC<IHomeProps> = ({devArticles, youtubeVids, githubRepos}) => {
 
         <div id={'me'} ref={me} className={styles.page}>
           <h2 className={styles.subtitle}>me.</h2>
-          <p className={styles.meText}>
+          <p className={`${styles.meText} ${roboto.className}`}>
             Hey, I&apos;m Dom. A Fullstack JavaScript Developer based in Germany with more than 6 years experience in
             web
             development.
@@ -143,7 +144,7 @@ const Home: FC<IHomeProps> = ({devArticles, youtubeVids, githubRepos}) => {
 
         <div id={'youtube'} ref={youtube} className={styles.page}>
           <h2 className={styles.subtitle}>youtube.</h2>
-          <ul className={styles.list}>
+          <ul className={`${styles.list} ${roboto.className}`}>
             {youtubeVids.map(video => (
               <li key={video.id.videoId}>
                 <a className={styles.work} target={'_blank'} rel="noreferrer"
@@ -164,7 +165,7 @@ const Home: FC<IHomeProps> = ({devArticles, youtubeVids, githubRepos}) => {
 
         <div id={'github'} ref={github} className={styles.page}>
           <h2 className={styles.subtitle}>github.</h2>
-          <ul className={styles.list}>
+          <ul className={`${styles.list} ${roboto.className}`}>
             {githubRepos?.map(repo => (
               <li key={repo.id}>
                 <a className={styles.work} target={'_blank'} rel="noreferrer" href={repo.html_url}>{repo.name}</a>
@@ -185,7 +186,7 @@ const Home: FC<IHomeProps> = ({devArticles, youtubeVids, githubRepos}) => {
 
         <div id={'articles'} ref={articles} className={styles.page}>
           <h2 className={styles.subtitle}>dev.to</h2>
-          <ul className={styles.list}>
+          <ul className={`${styles.list} ${roboto.className}`}>
             {devArticles?.map(article => (
               <li key={article.id}>
                 <a className={styles.work} target={'_blank'} rel="noreferrer" href={article.url}>
@@ -209,7 +210,7 @@ const Home: FC<IHomeProps> = ({devArticles, youtubeVids, githubRepos}) => {
 
         <div id={'contact'} ref={contact} className={styles.page}>
           <h2 className={styles.subtitle}>contact.</h2>
-          <ul className={styles.list}>
+          <ul className={`${styles.list} ${roboto.className}`}>
             <li><a className={styles.work} target={'_blank'} rel="noreferrer"
                    href="mailto:hi@domthedev.com">hi@domthedev.com</a></li>
             <li><a className={styles.work} target={'_blank'} rel="noreferrer"
