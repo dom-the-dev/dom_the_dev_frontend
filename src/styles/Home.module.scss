@@ -107,3 +107,11 @@
   position: absolute;
   bottom: 1rem;
 }
+
+.imprint {
+  display: none;
+
+  &.show {
+    display: block;
+  }
+}

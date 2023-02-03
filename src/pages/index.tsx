@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import {Roboto_Slab} from '@next/font/google'
 import styles from '@/styles/Home.module.scss'
-import {FC, useRef} from "react";
+import React, {FC, useRef, useState} from "react";
 
 const robotoSlab = Roboto_Slab({subsets: ['latin']})
 
@@ -34,8 +34,6 @@ interface IHomeProps {
 }
 
 const Home: FC<IHomeProps> = ({devArticles, youtubeVids, githubRepos}) => {
-  console.log('youtubeVids', youtubeVids)
-  console.log('githubRepos', githubRepos)
   const start = useRef<null | HTMLDivElement>(null);
   const me = useRef<null | HTMLDivElement>(null);
   // const projects = useRef<null | HTMLDivElement>(null);
@@ -43,6 +41,7 @@ const Home: FC<IHomeProps> = ({devArticles, youtubeVids, githubRepos}) => {
   const github = useRef<null | HTMLDivElement>(null);
   const articles = useRef<null | HTMLDivElement>(null);
   const contact = useRef<null | HTMLDivElement>(null);
+  const [showImprint, setShowImprint] = useState(false);
 
   const handleClick = (ref: any) => {
     ref.current?.scrollIntoView({behavior: 'smooth'});
@@ -212,6 +211,63 @@ const Home: FC<IHomeProps> = ({devArticles, youtubeVids, githubRepos}) => {
             <button className={`${styles.link} ${styles.next} ${robotoSlab.className}`}
                     onClick={() => handleClick(articles)}>back
             </button>
+            <button className={`${styles.link} ${styles.next} ${robotoSlab.className}`}
+                    onClick={() => setShowImprint(!showImprint)}>{showImprint ? 'close imprint' : 'imprint'}
+            </button>
+          </div>
+        </div>
+
+        <div className={`${styles.imprint} ${showImprint ? styles.show : ''}`}>
+          <div style={{padding: 15}}>
+            <h1>Impressum</h1>
+            <p>Angaben gemäß § 5 TMG: <br/>
+              Dominik Amrugiewicz <br/>
+              Bensheimer Straße 42<br/>
+              67547 Worms
+            </p>
+            <h2>Haftungsausschluss (Disclaimer)</h2>
+            <h3>Haftung für Inhalte</h3>
+            <p>Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf
+              diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als
+              Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu
+              überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
+              Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen
+              Gesetzen
+              bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis
+              einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen
+              werden
+              wir diese Inhalte umgehend entfernen. Haftung für Links Unser Angebot enthält Links zu externen
+              Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden
+              Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige
+              Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der
+              Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der
+              Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch
+              ohne
+              konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von
+              Rechtsverletzungen
+              werden wir derartige Links umgehend entfernen.</p>
+
+            <h3>Urheberrecht</h3>
+
+            <p>Die durch die Seitenbetreiber
+              erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die
+              Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des
+              Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
+              Downloads
+              und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. Soweit
+              die
+              Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter
+              beachtet.
+              Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine
+              Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei
+              Bekanntwerden
+              von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.</p>
+
+            <h3>Datenschutzhinweis:</h3>
+
+            <p>Beim Besuch dieser Internet-Seiten werden personenbezogene Daten erfasst, wenn Sie diese Angaben
+              freiwillig, etwa im Rahmen der Kontaktanfrage per E-Mail, machen und dienen zur Beantwortung Ihrer
+              Kontaktanfrage. Eine Weitergabe an Dritte findet nicht statt.</p>
           </div>
         </div>
       </main>
