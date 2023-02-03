@@ -41,11 +41,19 @@ const Home: FC<IHomeProps> = ({devArticles, youtubeVids, githubRepos}) => {
   const github = useRef<null | HTMLDivElement>(null);
   const articles = useRef<null | HTMLDivElement>(null);
   const contact = useRef<null | HTMLDivElement>(null);
+  const imprint = useRef<null | HTMLDivElement>(null);
   const [showImprint, setShowImprint] = useState(false);
 
   const handleClick = (ref: any) => {
     ref.current?.scrollIntoView({behavior: 'smooth'});
   };
+
+  const handleImprintClick = () => {
+    setShowImprint(!showImprint)
+    setTimeout(() => {
+      handleClick(imprint)
+    }, 100)
+  }
 
 
   return (
@@ -202,22 +210,26 @@ const Home: FC<IHomeProps> = ({devArticles, youtubeVids, githubRepos}) => {
         <div id={'contact'} ref={contact} className={styles.page}>
           <h2 className={styles.subtitle}>contact.</h2>
           <ul className={styles.list}>
-            <li><a className={styles.work} target={'_blank'} rel="noreferrer" href="mailto:hi@domthedev.com">hi@domthedev.com</a></li>
-            <li><a className={styles.work} target={'_blank'} rel="noreferrer" href="https://www.youtube.com/domthedeveloper">youtube</a></li>
-            <li><a className={styles.work} target={'_blank'} rel="noreferrer" href="https://github.com/dom-the-dev/">github</a></li>
-            <li><a className={styles.work} target={'_blank'} rel="noreferrer" href="https://dev.to/dom_the_dev">dev.to</a></li>
+            <li><a className={styles.work} target={'_blank'} rel="noreferrer"
+                   href="mailto:hi@domthedev.com">hi@domthedev.com</a></li>
+            <li><a className={styles.work} target={'_blank'} rel="noreferrer"
+                   href="https://www.youtube.com/domthedeveloper">youtube</a></li>
+            <li><a className={styles.work} target={'_blank'} rel="noreferrer"
+                   href="https://github.com/dom-the-dev/">github</a></li>
+            <li><a className={styles.work} target={'_blank'} rel="noreferrer"
+                   href="https://dev.to/dom_the_dev">dev.to</a></li>
           </ul>
           <div className={styles.linkWrapper}>
             <button className={`${styles.link} ${styles.next} ${robotoSlab.className}`}
                     onClick={() => handleClick(articles)}>back
             </button>
             <button className={`${styles.link} ${styles.next} ${robotoSlab.className}`}
-                    onClick={() => setShowImprint(!showImprint)}>{showImprint ? 'close imprint' : 'imprint'}
+                    onClick={handleImprintClick}>{showImprint ? 'close imprint' : 'imprint'}
             </button>
           </div>
         </div>
 
-        <div className={`${styles.imprint} ${showImprint ? styles.show : ''}`}>
+        <div ref={imprint} className={`${styles.imprint} ${showImprint ? styles.show : ''}`}>
           <div style={{padding: 15}}>
             <h1>Impressum</h1>
             <p>Angaben gemäß § 5 TMG: <br/>
