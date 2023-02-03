@@ -1,12 +1,37 @@
 import Head from 'next/head'
 import {Roboto_Slab} from '@next/font/google'
 import styles from '@/styles/Home.module.scss'
-import {Context, useRef} from "react";
+import {FC, useEffect, useRef} from "react";
 
 const robotoSlab = Roboto_Slab({subsets: ['latin']})
 
-export default function Home(props: any) {
-  console.log(props.data)
+interface IArticle {
+  id: string;
+  title: string;
+  url: string;
+}
+
+interface IGitHubRepo {
+  id: string;
+  title: string;
+  url: string;
+}
+
+interface IYoutubeVideo {
+  id: string;
+  title: string;
+  url: string;
+}
+
+interface IHomeProps {
+  devArticles: IArticle[],
+  githubRepos: IGitHubRepo[],
+  youtubeVids: IYoutubeVideo[],
+}
+
+const Home:FC<IHomeProps> = ({devArticles, youtubeVids, githubRepos }) => {
+  console.log('youtubeVids', youtubeVids)
+  console.log('githubRepos', githubRepos)
   const start = useRef<null | HTMLDivElement>(null);
   const me = useRef<null | HTMLDivElement>(null);
   const projects = useRef<null | HTMLDivElement>(null);
@@ -18,6 +43,7 @@ export default function Home(props: any) {
   const handleClick = (ref: any) => {
     ref.current?.scrollIntoView({behavior: 'smooth'});
   };
+
 
   return (
     <div className={robotoSlab.className}>
@@ -72,10 +98,16 @@ export default function Home(props: any) {
             Hey, I&apos;m Dom. A Fullstack JavaScript Developer based in Germany with more than 6 years experience in
             web
             development.
-            In 2022 I started freelancing until I become a member of the <a style={{textDecoration: 'underline'}} href="https://wohnsinn.com" target={'_blank'} rel="noreferrer">Wohnsinn</a> Crew. Since 2023 I&apos;m working
+            In 2022 I started freelancing until I become a member of the <a style={{textDecoration: 'underline'}}
+                                                                            href="https://wohnsinn.com"
+                                                                            target={'_blank'}
+                                                                            rel="noreferrer">Wohnsinn</a> Crew. Since
+            2023 I&apos;m working
             there as the Head of Frontend.
           </p>
-          <button className={`${styles.link} ${styles.next} ${robotoSlab.className}`} onClick={() => handleClick(projects)}>next</button>
+          <button className={`${styles.link} ${styles.next} ${robotoSlab.className}`}
+                  onClick={() => handleClick(projects)}>next
+          </button>
         </div>
 
         <div id={'projects'} ref={projects} className={styles.page}>
@@ -84,7 +116,9 @@ export default function Home(props: any) {
             <li>project 2</li>
             <li>project 3</li>
           </ul>
-          <button className={`${styles.link} ${styles.next} ${robotoSlab.className}`} onClick={() => handleClick(youtube)}>next</button>
+          <button className={`${styles.link} ${styles.next} ${robotoSlab.className}`}
+                  onClick={() => handleClick(youtube)}>next
+          </button>
 
         </div>
 
@@ -96,7 +130,9 @@ export default function Home(props: any) {
             <li>youtube 4</li>
             <li>youtube 5</li>
           </ul>
-          <button className={`${styles.link} ${styles.next} ${robotoSlab.className}`} onClick={() => handleClick(github)}>next</button>
+          <button className={`${styles.link} ${styles.next} ${robotoSlab.className}`}
+                  onClick={() => handleClick(github)}>next
+          </button>
         </div>
 
         <div id={'github'} ref={github} className={styles.page}>
@@ -106,16 +142,25 @@ export default function Home(props: any) {
             <li>github 3</li>
           </ul>
 
-          <button className={`${styles.link} ${styles.next} ${robotoSlab.className}`} onClick={() => handleClick(articles)}>next</button>
+          <button className={`${styles.link} ${styles.next} ${robotoSlab.className}`}
+                  onClick={() => handleClick(articles)}>next
+          </button>
         </div>
 
         <div id={'articles'} ref={articles} className={styles.page}>
           <ul className={styles.list}>
-            <li>articles 1</li>
-            <li>articles 2</li>
-            <li>articles 3</li>
+            {devArticles?.map(article => (
+              <li key={article.id}>
+                <a href={article.url}>
+                {article.title}
+                </a>
+              </li>
+            ))}
+
           </ul>
-          <button className={`${styles.link} ${styles.next} ${robotoSlab.className}`} onClick={() => handleClick(contact)}>next</button>
+          <button className={`${styles.link} ${styles.next} ${robotoSlab.className}`}
+                  onClick={() => handleClick(contact)}>next
+          </button>
         </div>
 
         <div id={'contact'} ref={contact} className={styles.page}>
@@ -128,19 +173,25 @@ export default function Home(props: any) {
   )
 }
 
+export default Home;
 
 export async function getStaticProps() {
 
-  const res = await fetch('https://dev.to/api/articles?username=dom_the_dev')
-  const devto = await res.json()
-  const latestGithub = await axios.get(process.env.NEXT_PUBLIC_GITHUB_API_URL + 'users/dom-the-dev/repos?per_page=4&sort=asc')
-  const latestYouTube = await axios.get(`${process.env.NEXT_PUBLIC_YT_API_URL}?key=${process.env.NEXT_PUBLIC_YT_API_KEY}&channelId=${process.env.NEXT_PUBLIC_YT_CHANNEL_ID}&part=snippet,id&order=date&maxResults=4`)
+  const resDevTo = await fetch('https://dev.to/api/articles?username=dom_the_dev')
+  const devArticles: IArticle[] = await resDevTo.json()
+
+  const youtubeRes = await fetch(`${process.env.NEXT_PUBLIC_YT_API_URL}?key=${process.env.NEXT_PUBLIC_YT_API_KEY}&channelId=${process.env.NEXT_PUBLIC_YT_CHANNEL_ID}&part=snippet,id&order=date&maxResults=4`)
+  const latestYouTube = await youtubeRes.json()
+  const items: IYoutubeVideo[] = latestYouTube.items
+
+  const githubRes = await fetch(process.env.NEXT_PUBLIC_GITHUB_API_URL + 'users/dom-the-dev/repos?per_page=4&sort=asc')
+  const latestGithub: IGitHubRepo[] = await githubRes.json()
 
   return {
     props: {
-      repos: latestGithub.data,
-      youtube: latestYouTube.data.items.filter((item: any) => item.id.kind === 'youtube#video'),
-      devto
+      githubRepos: latestGithub,
+      youtubeVids: items.filter((item: any) => item.id.kind === 'youtube#video'),
+      devArticles
     },
   }
 }
