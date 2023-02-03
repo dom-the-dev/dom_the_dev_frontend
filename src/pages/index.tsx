@@ -34,7 +34,7 @@ const Home:FC<IHomeProps> = ({devArticles, youtubeVids, githubRepos }) => {
   console.log('githubRepos', githubRepos)
   const start = useRef<null | HTMLDivElement>(null);
   const me = useRef<null | HTMLDivElement>(null);
-  const projects = useRef<null | HTMLDivElement>(null);
+  // const projects = useRef<null | HTMLDivElement>(null);
   const youtube = useRef<null | HTMLDivElement>(null);
   const github = useRef<null | HTMLDivElement>(null);
   const articles = useRef<null | HTMLDivElement>(null);
@@ -60,11 +60,11 @@ const Home:FC<IHomeProps> = ({devArticles, youtubeVids, githubRepos }) => {
                     onClick={() => handleClick(me)}>me
             </button>
           </li>
-          <li>
-            <button className={`${styles.link} ${robotoSlab.className}`}
-                    onClick={() => handleClick(projects)}>projects
-            </button>
-          </li>
+          {/*<li>*/}
+          {/*  <button className={`${styles.link} ${robotoSlab.className}`}*/}
+          {/*          onClick={() => handleClick(projects)}>projects*/}
+          {/*  </button>*/}
+          {/*</li>*/}
           <li>
             <button className={`${styles.link} ${robotoSlab.className}`} onClick={() => handleClick(youtube)}>youtube
             </button>
@@ -106,21 +106,21 @@ const Home:FC<IHomeProps> = ({devArticles, youtubeVids, githubRepos }) => {
             there as the Head of Frontend.
           </p>
           <button className={`${styles.link} ${styles.next} ${robotoSlab.className}`}
-                  onClick={() => handleClick(projects)}>next
-          </button>
-        </div>
-
-        <div id={'projects'} ref={projects} className={styles.page}>
-          <ul className={styles.list}>
-            <li>project 1</li>
-            <li>project 2</li>
-            <li>project 3</li>
-          </ul>
-          <button className={`${styles.link} ${styles.next} ${robotoSlab.className}`}
                   onClick={() => handleClick(youtube)}>next
           </button>
-
         </div>
+
+        {/*<div id={'projects'} ref={projects} className={styles.page}>*/}
+        {/*  <ul className={styles.list}>*/}
+        {/*    <li>project 1</li>*/}
+        {/*    <li>project 2</li>*/}
+        {/*    <li>project 3</li>*/}
+        {/*  </ul>*/}
+        {/*  <button className={`${styles.link} ${styles.next} ${robotoSlab.className}`}*/}
+        {/*          onClick={() => handleClick(youtube)}>next*/}
+        {/*  </button>*/}
+
+        {/*</div>*/}
 
         <div id={'youtube'} ref={youtube} className={styles.page}>
           <ul className={styles.list}>
