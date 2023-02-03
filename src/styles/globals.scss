@@ -1,5 +1,13 @@
 * {
   margin: 0;
   padding: 0;
-  color: rgba(0, 0, 0, 0.88);
+  color: #1E293B;
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      color: #FFD100;
+    }
+  }
 }

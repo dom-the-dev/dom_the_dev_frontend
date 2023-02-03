@@ -1,10 +1,22 @@
 import Head from 'next/head'
 import {Roboto_Slab} from '@next/font/google'
 import styles from '@/styles/Home.module.scss'
+import {useRef} from "react";
 
 const robotoSlab = Roboto_Slab({subsets: ['latin']})
 
 export default function Home() {
+  const start = useRef<null | HTMLDivElement>(null);
+  const me = useRef<null | HTMLDivElement>(null);
+  const projects = useRef<null | HTMLDivElement>(null);
+  const youtube = useRef<null | HTMLDivElement>(null);
+  const github = useRef<null | HTMLDivElement>(null);
+  const articles = useRef<null | HTMLDivElement>(null);
+  const contact = useRef<null | HTMLDivElement>(null);
+
+  const handleClick = (ref: any) => {
+    ref.current?.scrollIntoView({behavior: 'smooth'});
+  };
 
   return (
     <div className={robotoSlab.className}>
@@ -16,55 +28,97 @@ export default function Home() {
       </Head>
       <nav>
         <ul className={styles.nav}>
-          <li><a href="#projects">projects</a></li>
-          <li><a href="#youtube">youtube</a></li>
-          <li><a href="#github">github</a></li>
-          <li><a href="#articles">articles</a></li>
-          <li><a href="#contact">contact</a></li>
+          <li>
+            <button tabIndex={1} className={`${styles.link} ${robotoSlab.className}`}
+                    onClick={() => handleClick(me)}>me
+            </button>
+          </li>
+          <li>
+            <button className={`${styles.link} ${robotoSlab.className}`}
+                    onClick={() => handleClick(projects)}>projects
+            </button>
+          </li>
+          <li>
+            <button className={`${styles.link} ${robotoSlab.className}`} onClick={() => handleClick(youtube)}>youtube
+            </button>
+          </li>
+          <li>
+            <button className={`${styles.link} ${robotoSlab.className}`} onClick={() => handleClick(github)}>github
+            </button>
+          </li>
+          <li>
+            <button className={`${styles.link} ${robotoSlab.className}`}
+                    onClick={() => handleClick(articles)}>articles
+            </button>
+          </li>
+          <li>
+            <button className={`${styles.link} ${robotoSlab.className}`} onClick={() => handleClick(contact)}>contact
+            </button>
+          </li>
         </ul>
       </nav>
       <main className={styles.main}>
         <div className={styles.logo}>
           <h1>dom the dev</h1> <span>Fullstack JavaScript Developer never tired of learning and always up for new projects.</span>
         </div>
-        <div className={`${styles.page} ${styles.start}`}/>
+        <div ref={start} className={`${styles.page} ${styles.start}`}>
+          <button className={`${styles.link} ${robotoSlab.className}`} onClick={() => handleClick(me)}>start</button>
+        </div>
 
-        <div id={'projects'} className={`${styles.page} ${styles.projects}`}>
-          <ul>
+
+        <div id={'me'} ref={me} className={styles.page}>
+          <p className={styles.meText}>
+            Hey, I&apos;m Dom. A Fullstack JavaScript Developer based in Germany with more than 6 years experience in
+            web
+            development.
+            In 2022 I started freelancing until I become a member of the <a style={{textDecoration: 'underline'}} href="https://wohnsinn.com" target={'_blank'} rel="noreferrer">Wohnsinn</a> Crew. Since 2023 I&apos;m working
+            there as the Head of Frontend.
+          </p>
+          <button className={`${styles.link} ${styles.next} ${robotoSlab.className}`} onClick={() => handleClick(projects)}>next</button>
+        </div>
+
+        <div id={'projects'} ref={projects} className={styles.page}>
+          <ul className={styles.list}>
             <li>project 1</li>
             <li>project 2</li>
             <li>project 3</li>
           </ul>
+          <button className={`${styles.link} ${styles.next} ${robotoSlab.className}`} onClick={() => handleClick(youtube)}>next</button>
+
         </div>
 
-        <div id={'youtube'} className={`${styles.page} ${styles.projects}`}>
-          <ul>
+        <div id={'youtube'} ref={youtube} className={styles.page}>
+          <ul className={styles.list}>
             <li>youtube 1</li>
             <li>youtube 2</li>
             <li>youtube 3</li>
             <li>youtube 4</li>
             <li>youtube 5</li>
           </ul>
+          <button className={`${styles.link} ${styles.next} ${robotoSlab.className}`} onClick={() => handleClick(github)}>next</button>
         </div>
 
-        <div id={'github'} className={`${styles.page} ${styles.projects}`}>
-          <ul>
+        <div id={'github'} ref={github} className={styles.page}>
+          <ul className={styles.list}>
             <li>github 1</li>
             <li>github 2</li>
             <li>github 3</li>
           </ul>
+
+          <button className={`${styles.link} ${styles.next} ${robotoSlab.className}`} onClick={() => handleClick(articles)}>next</button>
         </div>
 
-        <div id={'articles'} className={`${styles.page} ${styles.projects}`}>
-          <ul>
+        <div id={'articles'} ref={articles} className={styles.page}>
+          <ul className={styles.list}>
             <li>articles 1</li>
             <li>articles 2</li>
             <li>articles 3</li>
           </ul>
+          <button className={`${styles.link} ${styles.next} ${robotoSlab.className}`} onClick={() => handleClick(contact)}>next</button>
         </div>
 
-        <div id={'contact'} className={`${styles.page} ${styles.projects}`}>
-          <ul>
+        <div id={'contact'} ref={contact} className={styles.page}>
+          <ul className={styles.list}>
             <li><a href="mailto:hi@domthedev.com">hi@domthedev.com</a></li>
           </ul>
         </div>
