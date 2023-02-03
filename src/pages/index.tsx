@@ -127,12 +127,21 @@ export default function Home(props: any) {
     </div>
   )
 }
-export async function getServerSideProps(context: Context<any>) {
+
+
+export async function getStaticProps() {
+
   const res = await fetch('https://dev.to/api/articles?username=dom_the_dev')
-  const data = await res.json()
+  const devto = await res.json()
+  const latestGithub = await axios.get(process.env.NEXT_PUBLIC_GITHUB_API_URL + 'users/dom-the-dev/repos?per_page=4&sort=asc')
+  const latestYouTube = await axios.get(`${process.env.NEXT_PUBLIC_YT_API_URL}?key=${process.env.NEXT_PUBLIC_YT_API_KEY}&channelId=${process.env.NEXT_PUBLIC_YT_CHANNEL_ID}&part=snippet,id&order=date&maxResults=4`)
+
   return {
     props: {
-      data
-    }
+      repos: latestGithub.data,
+      youtube: latestYouTube.data.items.filter((item: any) => item.id.kind === 'youtube#video'),
+      devto
+    },
   }
 }
+
