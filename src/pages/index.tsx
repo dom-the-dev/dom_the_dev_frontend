@@ -1,11 +1,12 @@
 import Head from 'next/head'
 import {Roboto_Slab} from '@next/font/google'
 import styles from '@/styles/Home.module.scss'
-import {useRef} from "react";
+import {Context, useRef} from "react";
 
 const robotoSlab = Roboto_Slab({subsets: ['latin']})
 
-export default function Home() {
+export default function Home(props: any) {
+  console.log(props.data)
   const start = useRef<null | HTMLDivElement>(null);
   const me = useRef<null | HTMLDivElement>(null);
   const projects = useRef<null | HTMLDivElement>(null);
@@ -125,4 +126,13 @@ export default function Home() {
       </main>
     </div>
   )
+}
+export async function getServerSideProps(context: Context<any>) {
+  const res = await fetch('https://dev.to/api/articles?username=dom_the_dev')
+  const data = await res.json()
+  return {
+    props: {
+      data
+    }
+  }
 }
