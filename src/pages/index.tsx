@@ -202,7 +202,10 @@ const Home: FC<IHomeProps> = ({devArticles, youtubeVids, githubRepos}) => {
 
         <div id={'contact'} ref={contact} className={styles.page}>
           <ul className={styles.list}>
-            <li><a href="mailto:hi@domthedev.com">hi@domthedev.com</a></li>
+            <li><a target={'_blank'} rel="noreferrer" href="mailto:hi@domthedev.com">hi@domthedev.com</a></li>
+            <li><a target={'_blank'} rel="noreferrer" href="https://www.youtube.com/domthedeveloper">youtube</a></li>
+            <li><a target={'_blank'} rel="noreferrer" href="https://github.com/dom-the-dev/">github</a></li>
+            <li><a target={'_blank'} rel="noreferrer" href="https://dev.to/dom_the_dev">dev.to</a></li>
           </ul>
           <div className={styles.linkWrapper}>
             <button className={`${styles.link} ${styles.next} ${robotoSlab.className}`}
