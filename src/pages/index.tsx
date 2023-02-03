@@ -90,7 +90,8 @@ const Home: FC<IHomeProps> = ({devArticles, youtubeVids, githubRepos}) => {
       </nav>
       <main className={styles.main}>
         <div className={styles.logo}>
-          <h1>dom the dev</h1> <span>Fullstack JavaScript Developer never tired of learning and always up for new projects.</span>
+          <h1>dom the dev</h1>
+          {/*<span className={styles.slogan}>Fullstack JavaScript Developer never tired of learning and always up for new projects.</span>*/}
         </div>
         <div ref={start} className={`${styles.page} ${styles.start}`}>
           <button className={`${styles.link} ${robotoSlab.className}`} onClick={() => handleClick(me)}>start</button>
@@ -98,6 +99,7 @@ const Home: FC<IHomeProps> = ({devArticles, youtubeVids, githubRepos}) => {
 
 
         <div id={'me'} ref={me} className={styles.page}>
+          <h2 className={styles.subtitle}>me.</h2>
           <p className={styles.meText}>
             Hey, I&apos;m Dom. A Fullstack JavaScript Developer based in Germany with more than 6 years experience in
             web
@@ -111,6 +113,9 @@ const Home: FC<IHomeProps> = ({devArticles, youtubeVids, githubRepos}) => {
           </p>
 
           <div className={styles.linkWrapper}>
+            <button className={`${styles.link} ${styles.next} ${robotoSlab.className}`}
+                    onClick={() => handleClick(start)}>back
+            </button>
             <button className={`${styles.link} ${styles.next} ${robotoSlab.className}`}
                     onClick={() => handleClick(youtube)}>next
             </button>
@@ -130,6 +135,7 @@ const Home: FC<IHomeProps> = ({devArticles, youtubeVids, githubRepos}) => {
         {/*</div>*/}
 
         <div id={'youtube'} ref={youtube} className={styles.page}>
+          <h2 className={styles.subtitle}>youtube.</h2>
           <ul className={styles.list}>
             {youtubeVids.map(video => (
               <li key={video.id.videoId}>
@@ -150,6 +156,7 @@ const Home: FC<IHomeProps> = ({devArticles, youtubeVids, githubRepos}) => {
         </div>
 
         <div id={'github'} ref={github} className={styles.page}>
+          <h2 className={styles.subtitle}>github.</h2>
           <ul className={styles.list}>
             {githubRepos?.map(repo => (
               <li key={repo.id}>
@@ -170,6 +177,7 @@ const Home: FC<IHomeProps> = ({devArticles, youtubeVids, githubRepos}) => {
         </div>
 
         <div id={'articles'} ref={articles} className={styles.page}>
+          <h2 className={styles.subtitle}>dev.to</h2>
           <ul className={styles.list}>
             {devArticles?.map(article => (
               <li key={article.id}>

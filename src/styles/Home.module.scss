@@ -16,10 +16,18 @@
     line-height: 29px;
   }
 
+  .slogan {
+    font-size: 12px;
+  }
+
   @media screen and (max-width: 768px) {
     flex-direction: column;
     align-items: flex-start;
   }
+}
+
+.subtitle {
+  margin-bottom: 10px;
 }
 
 .nav {
@@ -31,6 +39,7 @@
   gap: 10px;
   list-style: none;
   justify-content: flex-end;
+  z-index: 2;
 
   @media screen and (max-width: 768px) {
     left: 50%;
