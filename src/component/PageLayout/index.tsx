@@ -1,4 +1,4 @@
-import React, { FC, PropsWithChildren, PropsWithRef } from 'react';
+import React, { FC, PropsWithChildren } from 'react';
 import Head from 'next/head';
 // import styles from '@/styles/Home.module.scss';
 import Link from 'next/link';
@@ -19,7 +19,7 @@ const PageLayout: FC<PropsWithChildren<{ pageTitle: string }>> = ({ pageTitle, c
       </Head>
       <header className={`${robotoSlab.className} ${styles.header}`}>
         <Link href={'/'}>
-          <h1>hi, i'm dom the dev</h1>
+          <h1>hi, i&apos;m dom the dev</h1>
         </Link>
       </header>
       <main className={styles.main}>{children}</main>

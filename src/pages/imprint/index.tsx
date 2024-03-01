@@ -1,10 +1,5 @@
 import React from 'react';
-import { Roboto_Slab, Roboto } from '@next/font/google';
-import styles from '@/styles/Home.module.scss';
 import PageLayout from '@/component/PageLayout';
-
-const robotoSlab = Roboto_Slab({ subsets: ['latin'] });
-const roboto = Roboto({ weight: '300', subsets: ['latin'] });
 
 const Imprint = () => {
   return (
