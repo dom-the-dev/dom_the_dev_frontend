@@ -1,6 +1,5 @@
 import React from 'react';
 import PageLayout from '@/component/PageLayout';
-import Link from 'next/link';
 
 const Privacy = () => {
   return (
