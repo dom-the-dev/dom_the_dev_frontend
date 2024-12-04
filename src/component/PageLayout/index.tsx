@@ -29,14 +29,6 @@ const PageLayout: FC<PropsWithChildren<{ pageTitle: string }>> = ({ pageTitle, c
             <Link href={'/imprint'}>imprint</Link>
           </li>
           <li>
-            <a
-              target={'_blank'}
-              rel="noopener noreferrer"
-              href="https://www.youtube.com/domthedeveloper">
-              youtube
-            </a>
-          </li>
-          <li>
             <a target={'_blank'} rel="noopener noreferrer" href="https://github.com/dom-the-dev/">
               github
             </a>
