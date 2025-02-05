@@ -25,6 +25,9 @@ const PageLayout: FC<PropsWithChildren<{ pageTitle: string }>> = ({ pageTitle, c
       <main className={styles.main}>{children}</main>
       <footer className={`${robotoSlab.className} ${styles.footer}`}>
         <ul>
+          {/*<li>*/}
+          {/*  <Link href={'/apps'}>apps</Link>*/}
+          {/*</li>*/}
           <li>
             <Link href={'/imprint'}>imprint</Link>
           </li>
