@@ -7,7 +7,7 @@ const Privacy = () => {
     <PageLayout pageTitle={'Liga Live Chat - Datenschutzerklärung'}>
       <h2>Datenschutz­erklärung für Liga Live Chat</h2>
       <Splitline />
-      <h3>1. Datenschutz auf einen Blick </h3>
+      <h3>1. Datenschutz auf einen Blick</h3>
       <h4>Allgemeine Hinweise </h4>
       <p>
         Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren
