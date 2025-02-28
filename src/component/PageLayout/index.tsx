@@ -29,6 +29,9 @@ const PageLayout: FC<PropsWithChildren<{ pageTitle: string }>> = ({ pageTitle, c
           {/*  <Link href={'/apps'}>apps</Link>*/}
           {/*</li>*/}
           <li>
+            <Link href={'/apps'}>apps</Link>
+          </li>
+          <li>
             <Link href={'/imprint'}>imprint</Link>
           </li>
           <li>

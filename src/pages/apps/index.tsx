@@ -5,7 +5,11 @@ import Link from 'next/link';
 const Privacy = () => {
   return (
     <PageLayout pageTitle={'Domthedev - App'}>
-      <Link href={'/apps/mygymlib'}>MyGymLib</Link>
+      <ul>
+        <li>
+          <Link href={'/apps/liga-live-chat'}>Liga Live Chat</Link>
+        </li>
+      </ul>
     </PageLayout>
   );
 };

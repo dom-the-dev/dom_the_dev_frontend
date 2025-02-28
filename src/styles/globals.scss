@@ -35,3 +35,9 @@
 body, html, #__next {
   height: 100%;
 }
+
+h3, h2, h1, h4, h5, h6 {
+  margin-top: 32px;
+  font-weight: bold;
+  color: #000;
+}

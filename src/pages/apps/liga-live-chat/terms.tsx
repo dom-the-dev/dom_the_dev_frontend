@@ -1,10 +1,10 @@
 import React from 'react';
 import PageLayout from '@/component/PageLayout';
 
-const Privacy = () => {
+const Terms = () => {
   return (
-    <PageLayout pageTitle={'Tomodoro - Privacy Policy'}>
-      <h1>Tomodoro Datenschutz&shy;erkl&auml;rung</h1>
+    <PageLayout pageTitle={'Liga Live Chat - Privacy Policy'}>
+      <h1>Liga Live Chat Nutzungsbedingungen</h1>
       <h2>1. Datenschutz auf einen Blick</h2>
       <h3>Allgemeine Hinweise</h3>{' '}
       <p>
@@ -300,4 +300,4 @@ const Privacy = () => {
   );
 };
 
-export default Privacy;
+export default Terms;
