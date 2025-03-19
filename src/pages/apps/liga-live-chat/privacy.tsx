@@ -125,7 +125,6 @@ const Privacy = () => {
         Diese Daten werden ausschließlich zur Verwaltung Ihres Nutzerkontos und zur Bereitstellung
         der Chat-Funktion verwendet.
       </p>
-
       <Splitline />
       <h3>5. Chat-Funktion & Datenverarbeitung</h3>
       <h4>Erstellung von Chat-Nachrichten</h4>
@@ -192,7 +191,38 @@ const Privacy = () => {
         nicht ausdrücklich angeforderter Werbung wird hiermit widersprochen.
       </p>
       <Splitline />
-      <h4>8. Änderungen der Datenschutzerklärung</h4>
+      <h3>8. Richtlinien für nutzergenerierte Inhalte</h3>
+      <p>
+        Unsere App ermöglicht es Nutzern, Inhalte zu erstellen und zu teilen. Um ein sicheres und
+        respektvolles Umfeld für alle Nutzer zu gewährleisten, verpflichten sich alle Nutzer, die
+        folgenden Richtlinien einzuhalten.
+      </p>
+
+      <h4>8.1 Respektierung der Rechte anderer</h4>
+      <p>
+        Es ist strengstens untersagt, Inhalte zu erstellen, die: • gegen Datenschutzgesetze oder
+        Persönlichkeitsrechte verstoßen, • geistiges Eigentum oder Urheberrechte Dritter verletzen,
+        • Spam, irreführende oder betrügerische Inhalte enthalten, • andere Nutzer belästigen,
+        beleidigen, verleumden oder diskriminieren, • Gewalt, Hassrede oder illegale Aktivitäten
+        fördern. 8.2 Sicherheit Zum Schutz unserer Nutzer ist es verboten: • Drittanbieter-Apps oder
+        Automatisierungsdienste (Bots, Crawler) zur Manipulation oder zum Abgreifen von Daten zu
+        nutzen, • schädliche Links oder externe Verweise zu posten, die Nutzer gefährden könnten, •
+        Anmeldedaten von anderen Nutzern abzufragen oder sich als eine andere Person auszugeben, •
+        Inhalte zu teilen, die Malware, Phishing oder andere schädliche Elemente enthalten.
+      </p>
+      <h4>8.3 Moderation und Konsequenzen</h4>
+      <p>
+        • Nutzer können anstößige Inhalte melden. • Inhalte, die gegen diese Richtlinien verstoßen,
+        können ohne Vorankündigung entfernt werden. • Wiederholte Verstöße oder schwerwiegende
+        Regelverstöße können zur Sperrung oder Löschung des Nutzerkontos führen.
+      </p>
+      <p>
+        Durch die Nutzung unserer App erklärst du dich mit diesen Richtlinien einverstanden. Ein
+        Verstoß gegen diese Regeln kann zu Einschränkungen oder dauerhafter Sperrung des Accounts
+        führen.
+      </p>
+      <Splitline />
+      <h4>9. Änderungen der Datenschutzerklärung</h4>
       <p>
         Wir behalten uns vor, diese Datenschutzerklärung anzupassen, wenn sich die Rechtslage oder
         unsere App ändert. Die aktuelle Version der Datenschutzerklärung ist jederzeit in der App
