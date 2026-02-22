@@ -11,7 +11,7 @@ const Imprint = () => {
         hi@domthedev.com <br />
         +49 176 329 029 67 <br />
         <br />
-        67547 Worms
+        67549 Worms
       </p>
       <h2>Haftungsausschluss (Disclaimer)</h2>
       <h3>Haftung für Inhalte</h3>

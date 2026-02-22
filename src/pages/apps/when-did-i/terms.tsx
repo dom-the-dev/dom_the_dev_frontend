@@ -4,26 +4,26 @@ import Splitline from '@/component/Splitline';
 
 const Terms = () => {
   return (
-    <PageLayout pageTitle={'Liga Live Chat - Nutzungsbedingungen'}>
-      <h2>Nutzungsbedingungen für Liga Live Chat</h2>
+    <PageLayout pageTitle={'When Did I - Nutzungsbedingungen'}>
+      <h2>Nutzungsbedingungen für When Did I</h2>
       <p>Stand: {new Date().getFullYear()}</p>
       <p>
-        Willkommen bei <strong>Liga Live Chat</strong>! Durch die Nutzung unserer App akzeptierst du
-        die folgenden Nutzungsbedingungen. Falls du mit ihnen nicht einverstanden bist, darfst du
-        die App nicht verwenden.
+        Willkommen bei <strong>When Did I</strong>! Durch die Nutzung unserer App akzeptierst du die
+        folgenden Nutzungsbedingungen. Falls du mit ihnen nicht einverstanden bist, darfst du die
+        App nicht verwenden.
       </p>
       <Splitline />
       <h3>1. Geltungsbereich</h3>
       <p>
         Diese Nutzungsbedingungen gelten für alle registrierten und nicht registrierten Nutzer von{' '}
-        <strong>Liga Live Chat</strong>. Sie regeln den Zugriff auf die App und deren Funktionen.
+        <strong>When Did I</strong>. Sie regeln den Zugriff auf die App und deren Funktionen.
       </p>
       <Splitline />
       <h3>2. Nutzung der App</h3>
 
       <h4>2.1 Zweck der App</h4>
       <p>
-        Liga Live Chat ermöglicht es Nutzern, in Echtzeit über Bundesliga-Spiele zu chatten. Die App
+        When Did I ermöglicht es Nutzern, in Echtzeit über Bundesliga-Spiele zu chatten. Die App
         nutzt Spieldaten aus der <strong>OpenLigaDB API</strong>, übernimmt jedoch keine
         Verantwortung für deren Richtigkeit oder Aktualität.
       </p>

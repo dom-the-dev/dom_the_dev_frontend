@@ -4,15 +4,15 @@ import Splitline from '@/component/Splitline';
 
 const Privacy = () => {
   return (
-    <PageLayout pageTitle={'Liga Live Chat - Datenschutzerklärung'}>
-      <h2>Datenschutz­erklärung für Liga Live Chat</h2>
+    <PageLayout pageTitle={'When Did I - Datenschutzerklärung'}>
+      <h2>Datenschutz­erklärung für When Did I</h2>
       <Splitline />
       <h3>1. Datenschutz auf einen Blick</h3>
       <h4>Allgemeine Hinweise </h4>
       <p>
         Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren
-        personenbezogenen Daten passiert, wenn Sie die App Liga Live Chat nutzen. Personenbezogene
-        Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können. Ausführliche
+        personenbezogenen Daten passiert, wenn Sie die App When Did I nutzen. Personenbezogene Daten
+        sind alle Daten, mit denen Sie persönlich identifiziert werden können. Ausführliche
         Informationen entnehmen Sie der nachfolgenden Datenschutzerklärung.
       </p>
       <h4>Datenerfassung in dieser App</h4>
@@ -104,7 +104,7 @@ const Privacy = () => {
       <h3>4. Nutzerkonten & Registrierung</h3>
       <h4>Registrierung in der App</h4>
       <p>
-        Um Liga Live Chat nutzen zu können, können Sie sich registrieren. Dazu stehen Ihnen folgende
+        Um When Did I nutzen zu können, können Sie sich registrieren. Dazu stehen Ihnen folgende
         Anmeldeoptionen zur Verfügung:
       </p>
       <ul>
