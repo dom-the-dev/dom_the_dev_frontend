@@ -12,6 +12,9 @@ const Privacy = () => {
         <li>
           <Link href={'/apps/when-did-i'}>When Did I</Link>
         </li>
+        <li>
+          <Link href={'/apps/cineping'}>CinePing</Link>
+        </li>
       </ul>
     </PageLayout>
   );
